@@ -1,0 +1,1 @@
+activarGameOver = true;

@@ -1,0 +1,4 @@
+///GameOver
+
+obControl.gameOver = true;
+
