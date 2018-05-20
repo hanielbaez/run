@@ -12,13 +12,13 @@ partMonedaSystem = part_system_create();
 
 //Particulas
 partMonedas = part_type_create();
-part_type_sprite(partMonedas, spMoneda, false, true, false);
+part_type_sprite(partMonedas, spMasMoneda, false, true, false);
 part_type_alpha2(partMonedas, 1, 0);
-part_type_size(partMonedas,.5,1,-.0,false);
-part_type_speed(partMonedas,10, 30, false, false);
-part_type_direction(partMonedas,30,150,false,false);
+part_type_size(partMonedas,2.5,2.5,false,false);
+part_type_speed(partMonedas,20, 20, false, false);
+part_type_direction(partMonedas,90,90,false,false);
 part_type_blend(partMonedas,true);
-part_type_life(partMonedas,room_speed*.1,room_speed*.5);
+part_type_life(partMonedas,room_speed*.8,room_speed*.8);
 
 //Emisor
 partMonedaEmisor = part_emitter_create(partMonedaSystem);

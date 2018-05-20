@@ -8,7 +8,7 @@ if (layer_exists(layerPista))
 {
 	if (!obControl.gameOver)
 	{
-		layer_vspeed(layerPista, -27);
+		layer_vspeed(layerPista, velocidadPista);
 	}
 	else
 	{

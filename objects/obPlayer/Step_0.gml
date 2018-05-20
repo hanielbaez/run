@@ -5,14 +5,12 @@ if  iniciarJuego
 	{
 		puedeMoverse = false;
 		move_towards_point(x,yInicial,10);
-
 	}
 	else
 	{
 		speed = 0;
 		puedeMoverse = true;
 		iniciarJuego = false;
-		
 	}
 
 }
@@ -48,15 +46,12 @@ if xDireccion != 0
 	image_angle += xDireccion*10;
 	if !colision obCamara.agitar += 1.5; //Pequeno terremoto 
 	image_angle = clamp(image_angle,-30,30);
-	
-	
 }
 
 //Hacer que el vehiculo regrese a su angulo inicial.
 else
 {
-	if image_angle < 0 image_angle = image_angle + 10;
-	if image_angle > 0 image_angle = image_angle - 10;
+	image_angle = lerp(image_angle,0,.6);
 }
 
 //Aplicar movimiento

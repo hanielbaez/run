@@ -29,21 +29,23 @@ if obControl.gameOver
 }
 
 //Puntuacion Actual 
-draw_set_font(foPuntuacion);
-draw_set_color(c_white);
+draw_set_font(bitmapFont);
 draw_set_halign(fa_center);
-draw_set_alpha(.7);
-draw_text((room_width/2), view_halfy+150, puntuacion);
+draw_text_transformed_color((room_width/2)+10,view_halfy+180,puntuacion,3,3,image_angle,c_white,c_white,c_white,c_white,.6);
+
 //Best Score
-draw_set_font(foEstandar);
-if obControl.gameOver draw_text((room_width/2)-25, view_halfy+350, "Best: " + string(mejorPuntuacion));
+if obControl.gameOver draw_text_transformed_color((room_width/2),view_halfy+370,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
+//draw_text((room_width/2)-25, view_halfy+350, "Best: " + string(mejorPuntuacion));
 
 //Monedas
-draw_set_font(foEstandar);
-draw_set_color(c_yellow);
 draw_set_halign(fa_left);
-draw_sprite_ext(spMoneda,0,40,80,1,1,0,-1,.7);
-draw_text(100, 40, "x " + string(monedas));
+draw_sprite_ext(spMoneda,-1,60,70,1,1,0,-1,.7);
+draw_text_transformed_color(110,60,"X" + string(monedas),1,1,image_angle,c_yellow,c_yellow,c_yellow,c_yellow,.7);
+
+
+//draw_set_font(foEstandar);
+//draw_set_color(c_yellow);
+//draw_text(100, 40, "x " + string(monedas));
 
 //Resetiar opacidad
 draw_set_alpha(1);

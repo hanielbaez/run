@@ -12,7 +12,7 @@ else
 if place_meeting(x,y,obPlayer)
 {
 	part_emitter_region(partMonedaSystem, partMonedaEmisor,x-5,x+5,y-5,y+5,ps_shape_ellipse,ps_distr_gaussian);
-	part_emitter_burst(partMonedaSystem,partMonedaEmisor, partMonedas, 25);
+	part_emitter_burst(partMonedaSystem,partMonedaEmisor, partMonedas, 1);
 	obGUI.monedas++;
 	instance_destroy();
 }

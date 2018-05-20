@@ -12,5 +12,3 @@ yInicial = 350;
 randomize();
 x = choose(270, 450);
 y = -130;
-
-

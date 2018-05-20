@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00dd8372-72e6-4d45-b754-a52b375e5b18",
+            "Value": {
+                "id": "0a17eeb5-a058-40e6-a95d-0657ec7e0df4",
+                "resourcePath": "sprites\\spBitmapFont\\spBitmapFont.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02fbc8de-3f2c-4f93-8d89-7d3e85beeb20",
             "Value": {
                 "id": "fc7bd4ca-7256-404e-852a-ee4d55a329f2",
@@ -279,6 +287,14 @@
             }
         },
         {
+            "Key": "77daf3ed-2ba2-479d-8413-21b3bac6db65",
+            "Value": {
+                "id": "b962e5ca-92d5-4868-8ac3-30cf183a829e",
+                "resourcePath": "views\\77daf3ed-2ba2-479d-8413-21b3bac6db65.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "83a515ec-5ce5-40ff-98b3-577e3021341f",
             "Value": {
                 "id": "00a9d9d2-4dcc-428f-a0d0-1c2d1ed936d0",
@@ -404,6 +420,14 @@
                 "id": "712d725c-e443-43df-aba8-d1b77a216cc8",
                 "resourcePath": "views\\bf534813-5ed1-4403-8c98-57b011d9a442.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c5225534-0d42-48fc-b4ec-d1eb19646fcd",
+            "Value": {
+                "id": "2e6a9831-d5f6-4537-baa0-1591cf3fe767",
+                "resourcePath": "sprites\\spMasMoneda\\spMasMoneda.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
