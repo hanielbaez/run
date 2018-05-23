@@ -3,6 +3,7 @@
 if obControl.gameOver
 {
 	vspeed = 0;
+	instance_destroy(obMasPunto);
 }
 else
 {
@@ -12,7 +13,6 @@ else
 //Destruir carro
 if y == -150 
 {
-	instance_destroy(obMasPunto);
 	instance_destroy();
 }
 //Colision con player

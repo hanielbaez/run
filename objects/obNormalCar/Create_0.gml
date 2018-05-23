@@ -17,5 +17,10 @@ instance_create_depth(x,y+(sprite_height/2),depth-10,obMasPunto);
 moneda_aleatoria = irandom(10);
 if moneda_aleatoria <= 3
 {
-	instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
+	var cantidadMonedas = irandom(5);  
+	
+	repeat cantidadMonedas
+	{
+		instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
+	}
 }

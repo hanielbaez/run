@@ -22,5 +22,3 @@ part_type_life(partMonedas,room_speed*.8,room_speed*.8);
 
 //Emisor
 partMonedaEmisor = part_emitter_create(partMonedaSystem);
-//part_emitter_region(partMonedaSystem, partMonedaEmisor,x-10,x+10,y-10,y+10,ps_shape_ellipse,ps_distr_gaussian);
-//part_emitter_burst(partMonedaSystem,partMonedaEmisor, partMonedas, 10);

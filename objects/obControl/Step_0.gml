@@ -1,9 +1,8 @@
 //Fin del juego
 if gameOver
 {	
-	////Botones virtuale TryAgain 
-	v_tryAgain = virtual_key_add(150, 1100, 450, 100, ord("R"));
-	//virtual_key_show(v_tryAgain);
+	tryAgainX = 150;
+	tryAgainY = 1100;
 	
 	//Sistema de guardado
 	if file_exists("Save.sav")
@@ -30,8 +29,17 @@ if gameOver
 		
 		
 	}
-	
-	//Limpiar efecto de particulas.
-	effect_clear();
-	
 }
+
+if room == roomPrincipal
+{
+	if keyboard_check(vk_enter)
+	{
+		room_goto(room0)
+	}
+}
+else
+{
+	virtual_key_delete(vk_iniciar);
+}
+	

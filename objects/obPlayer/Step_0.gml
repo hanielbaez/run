@@ -12,7 +12,6 @@ if  iniciarJuego
 		puedeMoverse = true;
 		iniciarJuego = false;
 	}
-
 }
 
 if (!colision)
@@ -20,7 +19,7 @@ if (!colision)
 	//Controles Derecha y izquierda (INVERTIDOS)
 	if puedeMoverse 
 	{
-		xDireccion = keyboard_check_pressed(vk_left) - keyboard_check_pressed(vk_right);
+		xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
 	}
 }
 else
@@ -30,42 +29,29 @@ else
 	alarm[0] = 15; 
 	y = -170;
 	colision = false;
-	
 }
 
-//Modificar Movimiento y Angulo
-if xDireccion != 0 
+////Aplicar movimiento en el eje X
+x = xDireccion*20 + x;
+
+///Angulo
+if xDireccion != 0
 {
-	if puedeMoverse
-	{
-		//Movimiento en el eje X
-		xMovimiento = (xDireccion * room_width/3) + x;
-		puedeMoverse = false;
-	}
-	//Angulo
-	image_angle += xDireccion*10;
-	if !colision obCamara.agitar += 1.5; //Pequeno terremoto 
+	image_angle += xDireccion*5;
 	image_angle = clamp(image_angle,-30,30);
-}
+	if !colision obCamara.agitar += 1.5; //Pequeno terremoto 
+	
+	//Derrape
+	if obCamara.agitar > 8
+	{
+		part_emitter_region(sistema_derrape,emisor_derrape,x-10,x+10,y-10,y+10,ps_shape_rectangle,ps_distr_gaussian)
+		part_emitter_burst(sistema_derrape,emisor_derrape,particula_derrape,10);
+	}
 
-//Hacer que el vehiculo regrese a su angulo inicial.
+}
 else
 {
 	image_angle = lerp(image_angle,0,.6);
-}
-
-//Aplicar movimiento
-if distance_to_point(abs(xMovimiento), y) > velocidad 
-{
-	if xMovimiento != 0 && speed == 0 
-	{
-		move_towards_point(xMovimiento, y, velocidad);
-	}
-}
-else
-{
-	speed = 0;
-	puedeMoverse = true;
 }
 	
 //REINICIAR JUEGO
