@@ -1,5 +1,5 @@
 //Fin del juego
-if gameOver
+if gameOver && soloUnaVez
 {	
 	tryAgainX = 150;
 	tryAgainY = 1100;
@@ -29,17 +29,32 @@ if gameOver
 		
 		
 	}
+	
+	soloUnaVez = false;
 }
 
+//Teclas virtuales en la room principal
 if room == roomPrincipal
 {
 	if keyboard_check(vk_enter)
 	{
-		room_goto(room0)
+		alarm[0] = room_speed;
 	}
 }
-else
-{
-	virtual_key_delete(vk_iniciar);
-}
 	
+//Teclas virtuales en room0
+if room == room0
+{
+	//Ir a room Principal
+	if keyboard_check(ord("H"))
+	{
+		alarm[1] = room_speed;
+	}
+	
+	//Reiniciar juego
+	if keyboard_check_released(ord("R")) 
+	{
+		alarm[2] = room_speed;
+	}
+
+}

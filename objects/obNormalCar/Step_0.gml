@@ -19,7 +19,7 @@ if y == -150
 if place_meeting(x,y,obPlayer) 
 {	
 	obPlayer.colision = true;
-	create_explosion(x,y);
+	//create_explosion(x,y);
 	instance_destroy(obMasPunto);
-	instance_destroy();
+	//instance_destroy();
 }
