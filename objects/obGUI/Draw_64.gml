@@ -17,19 +17,27 @@ if obControl.gameOver
 
 //Puntuacion Actual 
 draw_set_font(bitmapFont);
-draw_set_halign(fa_center);
-
-draw_text_transformed_color(global.room_halfx-10,global.room_halfy-110,puntuacion,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
-	draw_text_transformed_color(global.room_halfx,global.room_halfy-100,puntuacion,3,3,image_angle,c_white,c_white,c_white,c_white,.7);	//Puntuacion
+if !obControl.gameOver && room == room0
+{
+	draw_set_halign(fa_left);
+	draw_text_transformed_color(100,130,puntuacion,1,1,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+	draw_text_transformed_color(110,140,puntuacion,1,1,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
+}
+	
+if obControl.gameOver || room == roomPrincipal
+	{
+		draw_set_halign(fa_center);
+		draw_text_transformed_color(global.room_halfx-110,global.room_halfy-310,puntuacion,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,puntuacion,3,3,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
+	}
 
 if room == roomPrincipal 
 {	
-	
-	draw_text_transformed_color(global.room_halfx,global.room_halfy+50,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
+	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
 }
 
 //Best Score
-if obControl.gameOver draw_text_transformed_color(global.room_halfx,global.room_halfy+50,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
+if obControl.gameOver draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
 
 //Monedas
 draw_set_halign(fa_left);

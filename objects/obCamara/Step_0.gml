@@ -5,7 +5,7 @@ agitar *= .9;
 
 if instance_exists(obNormalCar)
 {
-	velocidadPista = -(obNormalCar.velocidad/2)
+	velocidadPista = obNormalCar.velocidad/2
 }
 
 //Movimiento de la pista

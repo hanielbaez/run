@@ -38,7 +38,11 @@ if room == roomPrincipal
 {
 	if keyboard_check(vk_enter)
 	{
-		alarm[0] = room_speed;
+		//alarm[0] = room_speed;
+		if !instance_exists(obTransicion)
+		{
+			alarm[0] = room_speed;
+		}
 	}
 }
 	

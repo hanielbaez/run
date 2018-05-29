@@ -17,7 +17,7 @@ soloUnaVez = true
 var map_string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!;%:?*()_+-=.,/|\"'@#$^&{}[] ";
 bitmapFont = font_add_sprite_ext(spBitmapFont,map_string,true,5);
 
-
+depth = -998;
 
 
 

@@ -7,11 +7,11 @@ if obControl.gameOver
 }
 else
 {
-	y -= velocidad;
+	y += velocidad;
 }
 
 //Destruir carro
-if y == -150 
+if y == room_height
 {
 	instance_destroy();
 }

@@ -1,5 +1,5 @@
 /// Variables de la camara
 agitar = 0;
-velocidadPista = -15;
+velocidadPista = 5;
 
 layerPista = layer_get_id("Pista");

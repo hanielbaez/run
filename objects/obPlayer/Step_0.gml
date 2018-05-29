@@ -24,10 +24,10 @@ if (!colision)
 }
 else
 {
-	obCamara.agitar = 250;
+	if !obControl.gameOver obCamara.agitar = 100;
 	create_explosion(x,y);
 	alarm[0] = 15; 
-	y = -170;
+	y = -400;
 	colision = false;
 }
 
@@ -37,7 +37,7 @@ x = xDireccion*20 + x;
 ///Angulo
 if xDireccion != 0
 {
-	image_angle += xDireccion*5;
+	image_angle -= xDireccion*5;
 	image_angle = clamp(image_angle,-35,35);
 	if !colision obCamara.agitar += 1.5; //Pequeno terremoto 
 	
@@ -55,6 +55,5 @@ else
 	image_angle = lerp(image_angle,0,.7);
 }
 	
-
 
 
