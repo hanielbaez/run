@@ -24,8 +24,8 @@ if (!colision)
 }
 else
 {
-	if !obControl.gameOver obCamara.agitar = 100;
-	create_explosion(x,y);
+	if !obControl.gameOver obCamara.agitar = 200;
+	instance_create_depth(x,y,-1,obExplosion);
 	alarm[0] = 15; 
 	y = -400;
 	colision = false;

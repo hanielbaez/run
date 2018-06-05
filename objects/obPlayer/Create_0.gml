@@ -38,9 +38,10 @@ emisor_derrape = part_emitter_create(sistema_derrape); //Emisor
 sistema_frases = part_system_create(); //Sistema
 
 particula_frase = part_type_create();//Particula
-part_type_sprite(particula_frase,spFrases,false,false,true);
+part_type_sprite(particula_frase,spMasPuntuacion,false,false,true);
+part_type_blend(true,c_white);
 part_type_direction(particula_frase,90,90,false,false);
-part_type_speed(particula_frase,1,5,true,false);
+part_type_speed(particula_frase,1,5,false,false);
 part_type_alpha2(particula_frase,1,0);
 part_type_life(particula_frase,60,60);
 
