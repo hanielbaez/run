@@ -38,10 +38,12 @@ if room == roomPrincipal
 {
 	if keyboard_check(vk_enter)
 	{
-		//alarm[0] = room_speed;
+		/// @description Boton Play
 		if !instance_exists(obTransicion)
 		{
-			alarm[0] = room_speed;
+			var transicionTemporal
+			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
+			transicionTemporal.irA = room0;
 		}
 	}
 }
@@ -52,13 +54,29 @@ if room == room0
 	//Ir a room Principal
 	if keyboard_check(ord("H"))
 	{
-		alarm[1] = room_speed;
+		/// @description Boton HOME
+		if !instance_exists(obTransicion)
+		{
+			var transicionTemporal
+			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
+			transicionTemporal.irA = roomPrincipal;
+			audio_resume_sound(sndHappy);
+		}
 	}
 	
 	//Reiniciar juego
 	if keyboard_check_released(ord("R")) 
 	{
-		alarm[2] = room_speed;
+		/// @description Boton Try Again
+		obControl.gameOver = false;
+		obGUI.puntuacion = 0;
+		obGUI.monedas = 0;
+		audio_play_sound(sndHappy,1,true);
+		room_restart();
 	}
 
+}
+else
+{
+	obControl.gameOver = false;
 }

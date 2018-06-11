@@ -20,6 +20,8 @@ draw_set_font(bitmapFont);
 if !obControl.gameOver && room == room0
 {
 	draw_set_halign(fa_left);
+	draw_sprite_ext(spLikeMano,-1,60,156,.8,.8,0,c_black,.5); //Sombra
+	draw_sprite_ext(spLikeMano,-1,70,166,.8,.8,0,-1,1);
 	draw_text_transformed_color(100,130,puntuacion,1,1,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
 	draw_text_transformed_color(110,140,puntuacion,1,1,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
 }
@@ -27,7 +29,7 @@ if !obControl.gameOver && room == room0
 if obControl.gameOver || room == roomPrincipal
 	{
 		draw_set_halign(fa_center);
-		draw_text_transformed_color(global.room_halfx-110,global.room_halfy-310,puntuacion,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+		draw_text_transformed_color(global.room_halfx-120,global.room_halfy-320,puntuacion,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
 		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,puntuacion,3,3,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
 	}
 
