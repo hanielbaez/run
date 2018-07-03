@@ -14,14 +14,16 @@
         "2b4cfee5-0940-4b21-81c4-62ad92f9a1d4",
         "9ac1f80d-d5fa-4cc0-bb6d-5f2ee3b592c6",
         "e9a68f0f-08c1-46f3-a4ea-b9affbe56749",
-        "41aee962-40d5-4a71-a9fa-915cc3ba769d"
+        "e297fefa-afb4-4766-a4ee-c3d2acdb3414",
+        "81c32c28-0633-457b-9b62-0a4ceee6216b",
+        "733f718e-8a41-4ae2-9423-e0e30dd453de"
     ],
     "IsDnD": false,
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "CarrosGUI",
-            "id": "e654b026-fec9-4fb5-9a15-641b1e955d4e",
+            "name": "Camara",
+            "id": "0f8cfdda-ca24-4683-9d30-58070eaedf46",
             "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
@@ -32,8 +34,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_A348D27","id": "2b4cfee5-0940-4b21-81c4-62ad92f9a1d4","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_A348D27","objId": "0fdafc1e-633a-4bd9-9e58-c219cf09eff4","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 452,"y": 1216},
-{"name": "inst_65BA69B3","id": "41aee962-40d5-4a71-a9fa-915cc3ba769d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_65BA69B3","objId": "a179a11b-da21-4e39-b893-2dfb9589a9bd","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 452,"y": 576}
+{"name": "inst_2566E6C4","id": "c14c91e3-d111-400c-acdc-95f7a4fc16ab","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2566E6C4","objId": "adaf9533-9512-41bf-81a1-a7bce5d52678","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 196,"y": 320}
             ],
             "layers": [
 
@@ -47,8 +48,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Camara",
-            "id": "0f8cfdda-ca24-4683-9d30-58070eaedf46",
+            "name": "CarrosGUI",
+            "id": "e654b026-fec9-4fb5-9a15-641b1e955d4e",
             "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
@@ -59,7 +60,10 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_2566E6C4","id": "c14c91e3-d111-400c-acdc-95f7a4fc16ab","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2566E6C4","objId": "adaf9533-9512-41bf-81a1-a7bce5d52678","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 196,"y": 320}
+{"name": "inst_A348D27","id": "2b4cfee5-0940-4b21-81c4-62ad92f9a1d4","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_A348D27","objId": "0fdafc1e-633a-4bd9-9e58-c219cf09eff4","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 452,"y": 1216},
+{"name": "inst_178A694E","id": "e297fefa-afb4-4766-a4ee-c3d2acdb3414","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_178A694E","objId": "66b229f9-7e43-472b-969d-056a4c9a2433","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 192,"y": 480},
+{"name": "inst_59A0E717","id": "81c32c28-0633-457b-9b62-0a4ceee6216b","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_59A0E717","objId": "a179a11b-da21-4e39-b893-2dfb9589a9bd","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 448,"y": 576},
+{"name": "inst_63457C23","id": "733f718e-8a41-4ae2-9423-e0e30dd453de","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_63457C23","objId": "5c3df863-b23d-4545-b65f-eb9f2080f026","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 480,"y": 768}
             ],
             "layers": [
 
