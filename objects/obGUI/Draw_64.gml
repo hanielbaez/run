@@ -44,15 +44,17 @@ if obControl.gameOver || room == roomPrincipal
 
 if room == roomPrincipal 
 {	
+	
 	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
 }
 
 //Best Score
 if obControl.gameOver 
 {
-	if  mejorPuntuacion > puntuacion
+
+	if  !(mejorPuntuacion <= puntuacion)
 	{
-		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST: " + string(mejorPuntuacion ),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
+		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
 	}
 	else
 	{

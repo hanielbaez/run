@@ -1,6 +1,7 @@
 //Declarando Variables para la GUI
 puntuacion = 0;
 mejorPuntuacion = 0;
+Load(); //Cargar puntuacion
 monedas = 0;
 monedasTotal = 0;
 
@@ -20,7 +21,7 @@ var map_string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!;%:?*()_+-=.,/|\"'@#$^&{}
 bitmapFont = font_add_sprite_ext(spBitmapFont,map_string,true,5);
 
 depth = -998;
-Load();
+
 
 
 
