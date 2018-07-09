@@ -29,4 +29,4 @@ shift = amplitude * dsin(t);
  
 //clone the movement from the object's speed and direction
 xx += vspeed;
-x = xx + shift; //vertical wave motion
+if !obControl.gameOver x = xx + shift; //vertical wave motion

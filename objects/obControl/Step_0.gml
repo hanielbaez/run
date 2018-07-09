@@ -75,7 +75,7 @@ if room == room0
 		obGUI.puntuacion = 0;
 		obGUI.monedas = 0;
 		obControl.combo = 0;
-		audio_play_sound(sndHappy,1,true);
+		if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,true);
 		room_restart();
 	}
 
