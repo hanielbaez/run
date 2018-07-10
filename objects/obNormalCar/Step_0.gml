@@ -19,7 +19,6 @@ if y == room_height
 if place_meeting(x,y,obPlayer) && !obPlayer.volando 
 {	
 	obPlayer.colision = true;
-	//create_explosion(x,y);
 	instance_destroy(obMasPunto);
 	//instance_destroy();
 }

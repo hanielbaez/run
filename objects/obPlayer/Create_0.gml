@@ -10,6 +10,7 @@ puedeMoverse = false;
 colision = false;
 iniciarJuego = true;
 volando = false;
+logoCombo = true;
 
 
 yInicial = 900;
@@ -38,11 +39,12 @@ part_type_color1(particula_derrape2,c_white);
 
 emisor_derrape = part_emitter_create(sistema_derrape); //Emisor
 
-//PARTICULAS FRASES
+//PARTICULAS Like
 sistema_frases = part_system_create(); //Sistema
 
 particula_frase = part_type_create();//Particula
 part_type_sprite(particula_frase,spLikeMano,false,false,false);
+part_type_scale(particula_frase,2,2);
 part_type_direction(particula_frase,90,90,false,false);
 part_type_speed(particula_frase,20,20,false,false);
 part_type_alpha2(particula_frase,1,0);

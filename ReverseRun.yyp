@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "aaa37d17-e0de-4781-a31e-8842061bac4b",
+            "Value": {
+                "id": "93fc1877-96b9-48e4-8aed-acd122555067",
+                "resourcePath": "objects\\obAlasCombo\\obAlasCombo.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ab148885-25dc-4f18-9203-3138f33e6ea2",
             "Value": {
                 "id": "4cd97c0d-4314-406b-b85f-19240d683e37",
@@ -652,6 +660,14 @@
                 "id": "af096d28-5a0c-41c7-8ace-82740ece3cf7",
                 "resourcePath": "sounds\\sndHappy\\sndHappy.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "eddc84a8-51a3-4376-aa56-f893dcb04ccc",
+            "Value": {
+                "id": "43d566cb-e1d6-465b-9caf-59e5d00393e1",
+                "resourcePath": "sprites\\spAlasCombo\\spAlasCombo.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

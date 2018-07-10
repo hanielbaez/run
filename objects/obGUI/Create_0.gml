@@ -5,7 +5,6 @@ Load(); //Cargar puntuacion
 monedas = 0;
 monedasTotal = 0;
 
-
 dosSegundos = 2;
 activarGameOver = false;
 

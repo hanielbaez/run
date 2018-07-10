@@ -33,9 +33,10 @@ else
 	
 	//Deterner sonidos
 	audio_stop_sound(sndHappy); 
-	audio_stop_sound(sndDerrape);
-	audio_stop_sound(sndLike);
-	audio_stop_sound(sndCoin)
+	//audio_stop_sound(sndDerrape);
+	//audio_stop_sound(sndLike);
+	//audio_stop_sound(sndCoin)
+	audio_stop_all();
 	
 	audio_play_sound(sndExplosion,10,false); //Sonido de explosion
 }
@@ -74,12 +75,19 @@ if volando
 	image_xscale = lerp(image_xscale,1.5,0.1);
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,100,0.1);
+	alarm[1] = 60;
+	if !instance_exists(obAlasCombo) instance_create_depth(x,y,1,obAlasCombo); //Alas Combo
+	//if x !=800 move_towards_point(x,800,10);
+	//if x ==800 speed = 0;
+	
 }
 else
 {
 	image_xscale = lerp(image_xscale,1.1,0.1);
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,10,0.1);
+	logoCombo = true;
+	//move_towards_point(x,yInicial,10);
 }
 
 

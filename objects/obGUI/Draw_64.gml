@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Manejar la GUI
 
 
 //Game Over fondo
@@ -65,6 +64,15 @@ if obControl.gameOver
 }
 
 if obControl.gameOver draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
+
+if	instance_exists(obPlayer) 
+{
+	if obPlayer.volando && obPlayer.logoCombo
+	{
+		draw_set_halign(fa_center);
+		draw_text_transformed_color(global.room_halfx-100,200,"SUPER"+chr(13)+"COMBO!",2,2,0,c_blue,c_white,c_red,c_blue,1);
+	}
+}
 
 //Monedas
 draw_set_halign(fa_left);

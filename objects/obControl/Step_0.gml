@@ -1,3 +1,6 @@
+//Musica de fondo
+//if !audio_is_playing(sndHappy) && !gameOver audio_play_sound(sndHappy,1,0);
+
 //Fin del juego
 if gameOver && soloUnaVez
 {	
@@ -33,6 +36,7 @@ if gameOver && soloUnaVez
 	soloUnaVez = false;
 }
 
+
 //Teclas virtuales en la room principal
 if room == roomPrincipal
 {
@@ -62,7 +66,6 @@ if room == room0
 			var transicionTemporal
 			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
 			transicionTemporal.irA = roomPrincipal;
-			audio_resume_sound(sndHappy);
 			combo = 0;
 		}
 	}
@@ -82,5 +85,5 @@ if room == room0
 }
 else
 {
-	obControl.gameOver = false;
+	gameOver = false;
 }
