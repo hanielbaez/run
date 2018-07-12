@@ -85,4 +85,3 @@ draw_text_transformed_color(110,80,string(monedas),1,1,image_angle,c_yellow,c_ye
 
 //Resetiar opacidad
 draw_set_alpha(1);
-

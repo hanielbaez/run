@@ -77,9 +77,14 @@ if volando
 	sombraX = lerp(sombraX,100,0.1);
 	alarm[1] = 60;
 	if !instance_exists(obAlasCombo) instance_create_depth(x,y,1,obAlasCombo); //Alas Combo
-	//if x !=800 move_towards_point(x,800,10);
-	//if x ==800 speed = 0;
-	
+	if distance_to_point(x,700) > 10
+	{
+		move_towards_point(x,700,10);
+	}
+	else
+	{
+		speed = 0;
+	}
 }
 else
 {
@@ -87,7 +92,14 @@ else
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,10,0.1);
 	logoCombo = true;
-	//move_towards_point(x,yInicial,10);
+	//if distance_to_point(x,yInicial) > 10
+	//{
+	//	move_towards_point(x,900,yInicial);
+	//}
+	//else
+	//{
+	//	speed = 0;
+	//}
 }
 
 
