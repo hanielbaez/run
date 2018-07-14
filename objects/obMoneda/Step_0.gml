@@ -1,4 +1,4 @@
-//Moverse a la misma velocida que los otros carros
+/// @description Moverse a la misma velocida que los otros carros
 if !obControl.gameOver
 {
 	y += velocidad;
@@ -20,5 +20,4 @@ if place_meeting(x,y,obPlayer)
 }
 
 //Destruir moneda 
-
-if y >= room_height || place_meeting(x,y,obNormalCar) instance_destroy();
+if y >= room_height /*|| place_meeting(x,y,obNormalCar)*/ instance_destroy();

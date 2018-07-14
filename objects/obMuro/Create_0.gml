@@ -1,2 +1,2 @@
-/// Desaparecer los muros
+///@description Desaparecer los muros
 image_alpha = 0;

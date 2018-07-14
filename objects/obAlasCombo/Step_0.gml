@@ -6,10 +6,16 @@ image_xscale = obPlayer.image_xscale;
 image_yscale = image_xscale;
 
 part_emitter_region(systemSmoke,emmiterSmoke,x-5,x+5,y+10,y+20,ps_shape_rectangle,ps_distr_gaussian)
-part_emitter_burst(systemSmoke,emmiterSmoke,particleSmoke,5);
+part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeBlue,3);
+part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeWhite,3);
+part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeRed,3);
+
+part_emitter_region(systemVelocity,emmitterVelocity,100,800,100,1500,ps_shape_rectangle,ps_distr_linear)
+part_emitter_burst(systemVelocity,emmitterVelocity,particleTypeVelocity,1);
 
 if !obPlayer.volando
 {
 	part_system_destroy(systemSmoke);
+	part_system_destroy(systemVelocity);
 	instance_destroy();
 }

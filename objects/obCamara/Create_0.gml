@@ -1,4 +1,4 @@
-/// Variables de la camara
+///@description Variables de la camara
 agitar = 0;
 velocidadPista = 5;
 

@@ -1,4 +1,4 @@
-///Agitar pantalla
+///@description Agitar pantalla
 view_xport[0] = random_range(-agitar,agitar);
 view_yport[0] = random_range(-agitar, agitar);
 agitar *= .9;

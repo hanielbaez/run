@@ -1,4 +1,3 @@
-/// @description Insert description here
 /// @description Efecto de transicion
 transicionAlpha = clamp(transicionAlpha + (transicionEstado*transicionVelocidad),0,1);
 if transicionAlpha == 1

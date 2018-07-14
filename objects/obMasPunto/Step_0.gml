@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Delete-Velocity
 y += velocidad;
 
 if place_meeting(x,y,obPlayer) && !obPlayer.volando
@@ -13,7 +12,6 @@ if place_meeting(x,y,obPlayer) && !obPlayer.volando
 		part_emitter_burst(sistema_frases,emisor_frase,particula_frase,1);
 		audio_play_sound(sndLike,false,false);
 	}
-
 	instance_destroy();
 }
 
@@ -26,12 +24,19 @@ if y >= room_height && !obPlayer.volando
 	case 1:
 		obControl.combo -=1;
 		break;
-	default: obControl.combo -=2;
+	case 2:
+		obControl.combo -=2;
+		break;
+	case 3:
+		obControl.combo -=3;
+		break;
+	case 4:
+		obControl.combo -=4;
+		break;
+	default: obControl.combo -=5;
 	}
 	instance_destroy();
 }
 
-
 //Destruir en caso de salir de la pantalla.
 if y >= room_height instance_destroy();
-

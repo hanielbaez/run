@@ -12,22 +12,22 @@ if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,
 if (room == room0)
 {
 	moneda_aleatoria = irandom(10);
-	if moneda_aleatoria <= 4
+	if obPlayer.volando moneda_aleatoria = 1;
+	
+	if moneda_aleatoria <= 6
 	{
 			var yAleatorio = irandom_range(y-sprite_height,y-sprite_height-100);
 			var xAleatorio = irandom_range(300,630);
 			var PoN = choose(1,-1); //Positivo o Negativo
 			
-			for (var i = irandom(5);i>0;i--)
+			for (var i = irandom(8);i>0;i--)
 			{
-				instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
+				if !place_meeting(xAleatorio,yAleatorio,obPlayer) instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
 				xAleatorio = xAleatorio+100*PoN;
 				xAleatorio = clamp(xAleatorio,360,630)
 				yAleatorio = yAleatorio-100;
 				
 			}
-		
-		
 	}
 }
 

@@ -1,4 +1,4 @@
-/// Definir variables
+///@description  Definir variables
 velocidad = obNormalCar.velocidad;
 
 image_alpha = 1;
@@ -13,9 +13,9 @@ partMonedaSystem = part_system_create();
 //Particulas
 partMonedas = part_type_create();
 part_type_sprite(partMonedas, spMasPuntuacion, false, true, false);
-//part_type_alpha2(partMonedas, 1, 0);
 part_type_size(partMonedas,.1,.5,.2,false);
 part_type_life(partMonedas,10,10);
+part_type_blend(partMonedas,true);
 
 //Emisor
 partMonedaEmisor = part_emitter_create(partMonedaSystem);

@@ -1,3 +1,4 @@
+///@description Acciones del player
 if  iniciarJuego
 {
 	//Moverse hasta el punto de inicio
@@ -32,16 +33,11 @@ else
 	colision = false;
 	
 	//Deterner sonidos
-	audio_stop_sound(sndHappy); 
-	//audio_stop_sound(sndDerrape);
-	//audio_stop_sound(sndLike);
-	//audio_stop_sound(sndCoin)
 	audio_stop_all();
-	
 	audio_play_sound(sndExplosion,10,false); //Sonido de explosion
 }
 
-////Aplicar movimiento en el eje X
+///Aplicar movimiento en el eje X
 x = xDireccion*20 + x;
 
 ///Angulo
@@ -101,9 +97,3 @@ else
 	//	speed = 0;
 	//}
 }
-
-
-
-
-
-
