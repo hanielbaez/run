@@ -5,7 +5,7 @@ image_angle = obPlayer.image_angle;
 image_xscale = obPlayer.image_xscale;
 image_yscale = image_xscale;
 
-part_emitter_region(systemSmoke,emmiterSmoke,x-5,x+5,y+10,y+20,ps_shape_rectangle,ps_distr_gaussian)
+part_emitter_region(systemSmoke,emmiterSmoke,x-10,x+10,y+25,y+50,ps_shape_rectangle,ps_distr_gaussian)
 part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeBlue,3);
 part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeWhite,3);
 part_emitter_burst(systemSmoke,emmiterSmoke,particleSmokeRed,3);

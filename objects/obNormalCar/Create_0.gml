@@ -16,16 +16,16 @@ if (room == room0)
 	
 	if moneda_aleatoria <= 6
 	{
-			var yAleatorio = irandom_range(y-sprite_height,y-sprite_height-100);
+			var yAleatorio = y+sprite_height;
 			var xAleatorio = irandom_range(300,630);
 			var PoN = choose(1,-1); //Positivo o Negativo
 			
-			for (var i = irandom(8);i>0;i--)
+			for (var i = irandom(5);i>0;i--)
 			{
-				if !place_meeting(xAleatorio,yAleatorio,obPlayer) instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
+				if place_free(xAleatorio,yAleatorio) instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
 				xAleatorio = xAleatorio+100*PoN;
 				xAleatorio = clamp(xAleatorio,360,630)
-				yAleatorio = yAleatorio-100;
+				yAleatorio = yAleatorio+100;
 				
 			}
 	}

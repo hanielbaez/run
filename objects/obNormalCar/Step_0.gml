@@ -9,6 +9,8 @@ else
 	y += velocidad;
 }
 
+if room = room0 and !obControl.gameOver velocidad += 0.05;
+
 //Destruir carro
 if y == room_height
 {
@@ -19,7 +21,6 @@ if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {	
 	obPlayer.colision = true;
 	instance_destroy(obMasPunto);
-	//instance_destroy();
 }
 
 t = (t + increment) mod 360;

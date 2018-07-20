@@ -55,6 +55,9 @@ if xDireccion != 0
 		part_emitter_region(sistema_derrape,emisor_derrape,x-10,x+10,y-10,y+10,ps_shape_rectangle,ps_distr_gaussian)
 		part_emitter_burst(sistema_derrape,emisor_derrape,particula_derrape,10);
 		part_emitter_burst(sistema_derrape,emisor_derrape,particula_derrape2,10);
+		
+		//part_emitter_region(systemConfety,emitterConfeti,global.room_halfx-350,global.room_halfx+350,global.room_halfy-900,global.room_halfy-300,ps_shape_rectangle,ps_distr_gaussian)
+		//part_emitter_burst(systemConfety,emitterConfeti,partTypeConfetti,5);
 	}
 }
 else
@@ -73,14 +76,6 @@ if volando
 	sombraX = lerp(sombraX,100,0.1);
 	alarm[1] = 60;
 	if !instance_exists(obAlasCombo) instance_create_depth(x,y,1,obAlasCombo); //Alas Combo
-	if distance_to_point(x,700) > 10
-	{
-		move_towards_point(x,700,10);
-	}
-	else
-	{
-		speed = 0;
-	}
 }
 else
 {
@@ -88,12 +83,4 @@ else
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,10,0.1);
 	logoCombo = true;
-	//if distance_to_point(x,yInicial) > 10
-	//{
-	//	move_towards_point(x,900,yInicial);
-	//}
-	//else
-	//{
-	//	speed = 0;
-	//}
 }

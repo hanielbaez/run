@@ -1,5 +1,7 @@
 ///@description  Definir variables
 velocidad = obNormalCar.velocidad;
+sombraX = 10;
+sombraY = sombraX;
 
 image_alpha = 1;
 

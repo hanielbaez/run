@@ -19,5 +19,13 @@ if place_meeting(x,y,obPlayer)
 	instance_destroy();
 }
 
+if obPlayer.volando 
+{
+	image_xscale = 1.5;
+	image_yscale = image_yscale;
+	sombraX = 30;
+	sombraY = sombraX;
+}	
+
 //Destruir moneda 
 if y >= room_height /*|| place_meeting(x,y,obNormalCar)*/ instance_destroy();

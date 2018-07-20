@@ -1,42 +1,6 @@
 //Musica de fondo
 //if !audio_is_playing(sndHappy) && !gameOver audio_play_sound(sndHappy,1,0);
 
-//Fin del juego
-if gameOver && soloUnaVez
-{	
-	tryAgainX = 150;
-	tryAgainY = 1100;
-	
-	//Sistema de guardado
-	if file_exists("Save.sav")
-	{
-		var LoadFile = file_text_open_read("Save.sav");
-		var LoadPuntuacion = file_text_read_real(LoadFile);
-		file_text_close(LoadFile);
-		
-		if LoadPuntuacion > obGUI.puntuacion
-		{
-			 obGUI.mejorPuntuacion = LoadPuntuacion;
-		}
-		else
-		{
-			file_delete("Save.sav");
-			var saveFile = file_text_open_write("Save.sav")
-			var savePuntuacion = obGUI.puntuacion;
-			file_text_write_real(saveFile, savePuntuacion);
-			file_text_close(saveFile);
-			
-			obGUI.mejorPuntuacion = obGUI.puntuacion;
-			
-		}
-		
-		
-	}
-	
-	soloUnaVez = false;
-}
-
-
 //Teclas virtuales en la room principal
 if room == roomPrincipal
 {
@@ -78,7 +42,6 @@ if room == room0
 		obGUI.puntuacion = 0;
 		obGUI.monedas = 0;
 		obControl.combo = 0;
-		if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,true);
 		room_restart();
 	}
 
