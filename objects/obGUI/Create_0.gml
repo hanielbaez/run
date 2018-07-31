@@ -7,6 +7,7 @@ monedasTotal = 0;
 
 dosSegundos = 2;
 activarGameOver = false;
+confetti = true;
 
 global.room_halfx = room_width/2;
 global.room_halfy = room_height/2;
@@ -23,6 +24,7 @@ depth = -998;
 
 //Create Particle System
 systemConfety = part_system_create();
+part_system_automatic_draw(systemConfety,false);
 // Create Confetti Particle Type
 partTypeConfetti = part_type_create();
 // Set random (randomizes image_index) to TRUE here
@@ -36,7 +38,7 @@ part_type_gravity(partTypeConfetti, 0.3, 270);
 // Our rectangles are wiggly after all.
 part_type_direction(partTypeConfetti, 0, 360, 0, 30);
 // Movement speed and deceleration 
-part_type_speed(partTypeConfetti, 10, 15, -0.3, 0);
+part_type_speed(partTypeConfetti, 15, 25, -0.3, 0);
 part_type_size(partTypeConfetti, 0.2, 0.3, 0, 0);
 part_type_life(partTypeConfetti, 60, 120);
 

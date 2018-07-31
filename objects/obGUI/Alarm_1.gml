@@ -1,0 +1,2 @@
+/// @description Confetti
+confetti = true;

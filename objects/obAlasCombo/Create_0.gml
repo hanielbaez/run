@@ -39,11 +39,12 @@ emmiterSmoke = part_emitter_create(systemSmoke);
 systemVelocity = part_system_create();
 //Part Type
 particleTypeVelocity = part_type_create();
-part_type_shape(particleTypeVelocity,pt_shape_pixel);
+part_type_sprite(particleTypeVelocity,spLineasV,false,true,false);
+//part_type_shape(particleTypeVelocity,pt_shape_pixel);
 part_type_color2(particleTypeVelocity,c_blue,c_white);
 part_type_size(particleTypeVelocity,5,10,false,false);
 part_type_direction(particleTypeVelocity,270,270,false,false);
-part_type_speed(particleTypeVelocity,70,90,true,false);
+part_type_speed(particleTypeVelocity,80,100,true,false);
 part_type_life(particleTypeVelocity,5,10);
 part_type_blend(particleTypeVelocity,true);
 
