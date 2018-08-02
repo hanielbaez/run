@@ -34,7 +34,7 @@ else
 	
 	//Deterner sonidos
 	audio_stop_all();
-	audio_play_sound(sndExplosion,10,false); //Sonido de explosion
+	if obControl.music == 1 audio_play_sound(sndExplosion,10,false); //Sonido de explosion
 }
 
 ///Aplicar movimiento en el eje X
@@ -50,7 +50,7 @@ if xDireccion != 0
 	if abs(image_angle) > 30 && !volando
 	if abs(image_angle) > 30 
 	{
-		if !audio_is_playing(sndDerrape) && !obControl.gameOver audio_play_sound(sndDerrape,2,false); //Sonido de derrape
+		if !audio_is_playing(sndDerrape) && !obControl.gameOver && obControl.music == 1 audio_play_sound(sndDerrape,2,false); //Sonido de derrape
 		
 		part_emitter_region(sistema_derrape,emisor_derrape,x-10,x+10,y-10,y+10,ps_shape_rectangle,ps_distr_gaussian)
 		part_emitter_burst(sistema_derrape,emisor_derrape,particula_derrape,10);

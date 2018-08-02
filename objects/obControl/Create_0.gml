@@ -4,4 +4,5 @@ gameOver = false;
 
 soloUnaVez = true;
 combo = 0;
-//audio_play_sound(sndHappy,1,1);
+music = 1;
+if music == 1 audio_play_sound(sndHappy,1,1);

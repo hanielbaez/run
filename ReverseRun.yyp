@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "d85770ff-06d0-47ac-af6b-0809ac509dd5",
+            "Value": {
+                "id": "40a5e41c-8074-4974-ac9d-96dd1019e102",
+                "resourcePath": "sounds\\sndVictoria\\sndVictoria.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "d9e8fb3a-2d6f-4f8d-9b50-3a48e8a842c8",
             "Value": {
                 "id": "3b496c37-a68f-4a11-a9b8-0c85967f9c57",

@@ -15,6 +15,19 @@ if room == roomPrincipal
 			transicionTemporal.irA = room0;
 		}
 	}
+	
+	if keyboard_check_released(ord("M"))
+	{
+		music = music * -1;
+		if music == -1 
+		{
+			audio_stop_all();
+		}
+		else
+		{
+			if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,1);
+		}	
+	}
 }
 	
 //Teclas virtuales en room0

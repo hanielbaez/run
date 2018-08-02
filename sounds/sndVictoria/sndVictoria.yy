@@ -1,8 +1,8 @@
 {
-    "id": "e84e58ff-2a9f-4d57-9b88-49682dcdf443",
+    "id": "d85770ff-06d0-47ac-af6b-0809ac509dd5",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "sndHappy",
+    "name": "sndVictoria",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
@@ -10,5 +10,5 @@
     "preload": false,
     "sampleRate": 44100,
     "type": 0,
-    "volume": 0.26
+    "volume": 1
 }

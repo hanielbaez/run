@@ -17,5 +17,6 @@ if !obPlayer.volando
 {
 	part_system_destroy(systemSmoke);
 	part_system_destroy(systemVelocity);
+	if !audio_is_playing(sndHappy) && obControl.music == 1 audio_play_sound(sndHappy,1,1);
 	instance_destroy();
 }
