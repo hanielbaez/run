@@ -8,6 +8,6 @@ instance_create_depth(xInicial, yInicial, 301, obNormalCar);
 
 if !obControl.gameOver && instance_exists(obPlayer)
 {
-	alarm[0] = irandom_range(25,40);
+	alarm[0] = irandom_range(35,50);
 	obNormalCar.velocidad += .05;
 }

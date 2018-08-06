@@ -1,5 +1,5 @@
 //@decription Precionar Iniciar
-if keyboard_check(ord("M"))
+if obControl.music
 {
 	image_index = 1;
 }

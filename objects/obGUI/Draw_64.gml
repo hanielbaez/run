@@ -4,13 +4,8 @@
 if obControl.gameOver
 {
 	//Fondo negro
-	draw_set_alpha(0.7)
+	draw_set_alpha(0.5)
 	draw_rectangle_colour(0, 0, 720, 1466, colorNegro, colorNegro, colorNegro, colorNegro, false);	
-	
-	//Ver video;
-	draw_sprite_ext(spVerVideo, -1, global.room_halfx+25, 900,2,2,0,image_blend,image_alpha);
-	image_index = 0;
-	image_speed = 0;
 		
 }
 
@@ -58,7 +53,7 @@ if room == roomPrincipal
 if obControl.gameOver 
 {
 	Load();
-	if  (mejorPuntuacion <= puntuacion)
+	if  (mejorPuntuacion <= puntuacion) && puntuacion > 0
 	{
 		draw_set_halign(fa_center);
 		draw_text_transformed_color(global.room_halfx-100,200,"NEW"+chr(13)+"BEST"+chr(13)+"SCORE!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);

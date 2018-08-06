@@ -34,7 +34,17 @@ else
 	
 	//Deterner sonidos
 	audio_stop_all();
-	if obControl.music == 1 audio_play_sound(sndExplosion,10,false); //Sonido de explosion
+	
+	var FailSound = choose(sndBadOutCome,sndBreakdown,sndCompleteFailure,sndDeadDuck,sndDisaster,sndDownFall,sndEpicFail,
+							sndFail,sndFailure,sndFlameOut,sndGameOver,sndItOver,sndLoser,sndNeedPractice,sndNextTime,
+							sndNoTwo,sndNoFaith,sndNoMan,sndNoNoNo,sndNo,sndNoThisWay,sndOneMistake,sndOuch,sndRidiculous,
+							sndSoBad,sndStarItOver,sndTerrible,sndTerribleTwo,sndThatIsFail,sndThatMistake,sndThaIsError,sndTooBad,
+							sndTryItAgain,sndWannaGiveUp,sndWashOut,sndWhatShame,sndWhaHaveDone,sndWrongWay,sndYouDied,sndYuoFailed,
+							sndYuoFailedTwo,sndYouGoWrong,sndYouSuck,sndYouWereDefeat,sndYouWereDefeat,sndYouAreOut);
+	
+	if obControl.music == 1 && !(mejorPuntuacion <= puntuacion) audio_play_sound(FailSound,10,false); //Sonido de explosion
+	
+	
 }
 
 ///Aplicar movimiento en el eje X
