@@ -13,7 +13,7 @@ volando = false;
 logoCombo = true;
 
 
-yInicial = 850;
+yInicial = 750;
 x = 452;
 y = room_height;
 

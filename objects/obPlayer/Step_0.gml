@@ -42,7 +42,7 @@ else
 							sndTryItAgain,sndWannaGiveUp,sndWashOut,sndWhatShame,sndWhaHaveDone,sndWrongWay,sndYouDied,sndYuoFailed,
 							sndYuoFailedTwo,sndYouGoWrong,sndYouSuck,sndYouWereDefeat,sndYouWereDefeat,sndYouAreOut);
 	
-	if obControl.music == 1 && !(mejorPuntuacion <= puntuacion) audio_play_sound(FailSound,10,false); //Sonido de explosion
+	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) audio_play_sound(FailSound,10,false); //Sonido de explosion
 	
 	
 }
@@ -58,7 +58,7 @@ if xDireccion != 0
 	
 	//Derrape
 	if abs(image_angle) > 30 && !volando
-	if abs(image_angle) > 30 
+	if abs(image_angle) > 25 
 	{
 		if !audio_is_playing(sndDerrape) && !obControl.gameOver && obControl.music == 1 audio_play_sound(sndDerrape,2,false); //Sonido de derrape
 		

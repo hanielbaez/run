@@ -56,7 +56,7 @@ if obControl.gameOver
 	if  (mejorPuntuacion <= puntuacion) && puntuacion > 0
 	{
 		draw_set_halign(fa_center);
-		draw_text_transformed_color(global.room_halfx-100,200,"NEW"+chr(13)+"BEST"+chr(13)+"SCORE!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);
+		draw_text_transformed_color(global.room_halfx-100,200,"YOU ARE"+chr(13)+"THE"+chr(13)+"MAN!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);
 		
 		//Confetti
 		part_system_drawit(systemConfety);

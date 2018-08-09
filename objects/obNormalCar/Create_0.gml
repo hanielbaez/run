@@ -2,8 +2,15 @@
 velocidad = 25;
 //SPRITE aleaorio
 randomize();
-image_index = irandom_range(0,7);
+image_index = irandom_range(0,15);
 image_speed = 0;
+
+//Swicht size for big cars
+if image_index >= 13
+{
+	image_xscale = 1.7;
+	image_yscale = image_xscale;
+}
 
 //Crear obMasPuntos
 if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,obMasPunto);
