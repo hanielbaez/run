@@ -13,7 +13,10 @@
         "ad56dba1-808c-4da4-a3a4-3964820c870f",
         "e5a2e7ee-be26-48f3-99dd-13a18037a17f",
         "49344fce-f2c0-47d7-abef-4d94510f3a57",
-        "185047d9-7012-49b4-be19-9bce069086bd"
+        "185047d9-7012-49b4-be19-9bce069086bd",
+        "6382d3a2-c417-49e0-b8cb-973dc2787d1b",
+        "f774153a-ef4e-44d1-ab89-03f072f58984",
+        "fa3bbf74-ad84-4aca-96ee-a16d8d560d9a"
     ],
     "filterType": "GMObject",
     "folderName": "grGUI",

@@ -82,7 +82,6 @@ if volando
 	image_xscale = lerp(image_xscale,1.5,0.1);
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,100,0.1);
-	alarm[1] = 60;
 	if !instance_exists(obAlasCombo) instance_create_depth(x,y,1,obAlasCombo); //Alas Combo
 }
 else
@@ -90,5 +89,4 @@ else
 	image_xscale = lerp(image_xscale,1.1,0.1);
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,10,0.1);
-	logoCombo = true;
 }

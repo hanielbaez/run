@@ -27,7 +27,7 @@ if (room == room0)
 			var xAleatorio = irandom_range(300,630);
 			var PoN = choose(1,-1); //Positivo o Negativo
 			
-			for (var i = irandom(5);i>0;i--)
+			for (var i = random_range(3,6);i>0;i--)
 			{
 				if place_free(xAleatorio,yAleatorio) instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
 				xAleatorio = xAleatorio+100*PoN;

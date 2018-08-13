@@ -2,6 +2,7 @@
 velocidad = obNormalCar.velocidad;
 sombraX = 10;
 sombraY = sombraX;
+AudioSpitch = 1;
 
 image_alpha = 1;
 

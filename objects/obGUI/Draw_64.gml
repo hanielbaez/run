@@ -76,8 +76,8 @@ if obControl.gameOver
 
 //Monedas
 draw_set_halign(fa_left);
-draw_sprite_ext(spMoneda,-1,60,86,.7,.7,0,c_black,.5); //Sombra
-draw_sprite_ext(spMoneda,-1,70,96,.7,.7,0,-1,1);
+draw_sprite_ext(spMoneda,0,60,86,.7,.7,0,c_black,.5); //Sombra
+draw_sprite_ext(spMoneda,0,70,96,.7,.7,0,-1,1);
 
 if room != room0 monedas = monedasTotal;
 draw_text_transformed_color(100,70,string(monedas),.7,.7,image_angle,c_black,c_black,c_black,c_black,.5);

@@ -1,17 +1,14 @@
 /// @description Animar barra de combo
 if obPlayer.volando 
 {
-	if audio_is_playing(sndHappy) audio_stop_sound(sndHappy);
-	if !(audio_is_playing(sndCombo)) && !obControl.gameOver && obControl.music == 1 audio_play_sound(sndCombo,1,true); //	MUSICA ACELERADA
-	obControl.combo -= 1/room_speed;
-	if instance_exists(obNormalCar) obNormalCar.velocidad = 70; //Aumentar la velocidad de los carros
+	audio_sound_pitch(sndHappy,1.3) //	MUSICA ACELERADA
+	obControl.combo -= 1/7;
+	if instance_exists(obNormalCar) obNormalCar.velocidad = 150; //Aumentar la velocidad de los carros
 }
 else
 {
+	audio_sound_pitch(sndHappy,1)
 	if instance_exists(obNormalCar) obNormalCar.velocidad = 25; //Aumentar la velocidad de los carros
-	if audio_is_playing(sndCombo) audio_stop_sound(sndCombo);
-	if !audio_is_playing(sndHappy) audio_resume_sound(sndHappy);
-	
 }
 
 if obControl.combo = 0 

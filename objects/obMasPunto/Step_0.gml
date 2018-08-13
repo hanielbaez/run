@@ -38,5 +38,7 @@ if y >= room_height && !obPlayer.volando
 	instance_destroy();
 }
 
+image_xscale = obCrearCarros.image_xscale;
+
 //Destruir en caso de salir de la pantalla.
 if y >= room_height instance_destroy();
