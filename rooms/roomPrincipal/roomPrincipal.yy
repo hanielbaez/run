@@ -84,7 +84,7 @@
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Pista",
             "id": "e2b08670-fd4f-4b7e-a73c-a91a01f3dd81",
-            "animationFPS": 3,
+            "animationFPS": 0,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
             "depth": 200,

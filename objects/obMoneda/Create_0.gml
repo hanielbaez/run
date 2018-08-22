@@ -1,5 +1,4 @@
 ///@description  Definir variables
-velocidad = obNormalCar.velocidad;
 sombraX = 10;
 sombraY = sombraX;
 AudioSpitch = 1;

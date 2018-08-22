@@ -18,20 +18,23 @@ if !obControl.gameOver && room == room0
 	draw_sprite_ext(spLikeMano,-1,70,166,.8,.8,0,-1,1);
 	draw_text_transformed_color(100,150,puntuacion,.7,.7,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
 	draw_text_transformed_color(110,160,puntuacion,.7,.7,image_angle,c_white,c_white,c_white,c_white,1); //Puntuacion
+
 }
 
 if room == roomPrincipal
 {
+	
+	//mejorPuntuacion
 	draw_set_halign(fa_center);
-	draw_text_transformed_color(global.room_halfx-120,global.room_halfy-320,mejorPuntuacion,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
-	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,mejorPuntuacion,3,3,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
+	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-320,mejorPuntuacion,2,2,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+	draw_text_transformed_color(global.room_halfx-80,global.room_halfy-300,mejorPuntuacion,2,2,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
 }
 	
 if obControl.gameOver 
 	{
 		if (mejorPuntuacion <= puntuacion)
 		{
-			var theScore = mejorPuntuacion; 
+			var theScore = mejorPuntuacion;
 		}
 		else
 		{
@@ -39,14 +42,14 @@ if obControl.gameOver
 		}
 	
 		draw_set_halign(fa_center);
-		draw_text_transformed_color(global.room_halfx-120,global.room_halfy-320,theScore,3,3,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
-		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,theScore,3,3,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
+		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-320,theScore,2,2,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+		draw_text_transformed_color(global.room_halfx-80,global.room_halfy-300,theScore,2,2,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
 	}
 
 if room == roomPrincipal 
 {	
 	
-	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
+	//draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
 }
 
 //Best Score
@@ -55,7 +58,7 @@ if obControl.gameOver
 	Load();
 	if  (mejorPuntuacion <= puntuacion) && puntuacion > 0
 	{
-		draw_set_halign(fa_center);
+		draw_set_halign(fa_center); //winner chicken dinner
 		draw_text_transformed_color(global.room_halfx-100,200,"YOU ARE"+chr(13)+"THE"+chr(13)+"MAN!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);
 		
 		//Confetti
@@ -70,7 +73,7 @@ if obControl.gameOver
 	}
 	else
 	{
-		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST: " + string(mejorPuntuacion),1,1,image_angle,c_white,c_white,c_white,c_white,.9);
+		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-200,"BEST: " + string(mejorPuntuacion),.7,.7,image_angle,c_yellow,c_white,c_yellow,c_white,1);
 	}
 }
 

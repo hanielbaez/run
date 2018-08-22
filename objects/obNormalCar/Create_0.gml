@@ -1,5 +1,9 @@
 ///Inicializando variables
 velocidad = 25;
+
+//Crear obMasPuntos
+if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,obMasPunto);
+
 //SPRITE aleaorio
 randomize();
 image_index = irandom_range(0,15);
@@ -11,9 +15,6 @@ if image_index >= 13
 	image_xscale = 1.7;
 	image_yscale = image_xscale;
 }
-
-//Crear obMasPuntos
-if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,obMasPunto);
 
 //Crear moneda
 if (room == room0)

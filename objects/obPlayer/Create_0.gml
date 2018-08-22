@@ -45,16 +45,13 @@ sistema_frases = part_system_create(); //Sistema
 particula_frase = part_type_create();//Particula
 part_type_sprite(particula_frase,spLikeMano,false,false,false);
 part_type_scale(particula_frase,2,2);
-part_type_direction(particula_frase,90,90,false,false);
+part_type_direction(particula_frase,0,360,false,false);
+part_type_gravity(particula_frase,5,270)
 part_type_speed(particula_frase,20,20,false,false);
 part_type_alpha2(particula_frase,1,0);
 part_type_life(particula_frase,30,30);
 
 emisor_frase = part_emitter_create(sistema_frases);//Emisor
-
-
-
-
 
 
 //Create Particle System
@@ -77,3 +74,18 @@ part_type_size(partTypeConfetti, 0.2, 0.3, 0, 0);
 part_type_life(partTypeConfetti, 60, 120);
 
 emitterConfeti = part_emitter_create(systemConfety);
+
+//RASTRO//
+systemRastro = part_system_create();
+part_system_automatic_draw(systemRastro,false);
+
+partRastro = part_type_create();
+part_type_sprite(partRastro,spSuperCar01,false,false,false);
+part_type_blend(partRastro,true);
+part_type_alpha2(partRastro,.7,.1);
+part_type_life(partRastro,10,10);
+part_type_speed(partRastro,20,40,5,false);
+part_type_direction(partRastro,270,270,false,false);
+//part_type_gravity(partRastro,20,270);	
+
+emiteRastro = part_emitter_create(systemRastro)

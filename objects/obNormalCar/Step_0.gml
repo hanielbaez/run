@@ -8,8 +8,7 @@ else
 {
 	y += velocidad;
 }
-
-if room = room0 and !obControl.gameOver velocidad += 0.05;
+//if room = room0 and !obControl.gameOver velocidad += 0.05;
 //if !obControl.gameOver velocidad += 0.05;
 
 //Destruir carro
@@ -35,9 +34,9 @@ if image_index >= 13 && instance_exists(obPlayer)
 	}
 }
 
-t = (t + increment) mod 360;
-shift = amplitude * dsin(t);
+//t = (t + increment) mod 360;
+//shift = amplitude * dsin(t);
  
-//clone the movement from the object's speed and direction
-xx += vspeed;
-if !obControl.gameOver x = xx + shift; //vertical wave motion
+////clone the movement from the object's speed and direction
+//xx += vspeed;
+//if !obControl.gameOver x = xx + shift; //vertical wave motion

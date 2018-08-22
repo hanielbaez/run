@@ -1,2 +1,2 @@
-/// @description Velocida del carro normal
+/// @description Declare variable
 velocidad = obNormalCar.velocidad;

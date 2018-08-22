@@ -5,7 +5,7 @@ if obControl.gameOver && soloUnaVez
 	Load();
 	if !(mejorPuntuacion <= puntuacion) || puntuacion <= 10
 	{
-		instance_create_depth(global.room_halfx-100,300,-999,obGameOver); //GAME OVER
+		instance_create_depth(global.room_halfx-100,-300,-999,obGameOver); //GAME OVER
 	}
 	else
 	{

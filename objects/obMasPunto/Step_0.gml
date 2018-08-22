@@ -3,13 +3,14 @@ y += velocidad;
 
 if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {
-	obGUI.puntuacion++;
+	obGUI.puntuacion+=10;
+	effect_create_above(ef_firework,160,150,5,c_blue);
 	saving();
 	if (obControl.combo != 15 && !obPlayer.volando) obControl.combo++;
 	with(obPlayer)
 	{	
 		part_emitter_region(sistema_frases,emisor_frase,obPlayer.x-50,obPlayer.x+50,obPlayer.y-100,obPlayer.y,0,0);
-		part_emitter_burst(sistema_frases,emisor_frase,particula_frase,1);
+		part_emitter_burst(sistema_frases,emisor_frase,particula_frase,10);
 		if obControl.music == 1 audio_play_sound(sndLike,false,false);
 	}
 	instance_destroy();
@@ -41,4 +42,7 @@ if y >= room_height && !obPlayer.volando
 image_xscale = obCrearCarros.image_xscale;
 
 //Destruir en caso de salir de la pantalla.
-if y >= room_height instance_destroy();
+if y >= room_height 
+{
+	instance_destroy();
+}

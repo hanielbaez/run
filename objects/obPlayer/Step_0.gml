@@ -22,6 +22,10 @@ if (!colision)
 	{
 		xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
 	}
+	
+	//Rastro de velocidad
+	part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
+	part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
 }
 else
 {
@@ -42,7 +46,11 @@ else
 							sndTryItAgain,sndWannaGiveUp,sndWashOut,sndWhatShame,sndWhaHaveDone,sndWrongWay,sndYouDied,sndYuoFailed,
 							sndYuoFailedTwo,sndYouGoWrong,sndYouSuck,sndYouWereDefeat,sndYouWereDefeat,sndYouAreOut);
 	
-	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) audio_play_sound(FailSound,10,false); //Sonido de explosion
+	//if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
+	//{
+	//	audio_play_sound()
+	//}
+	//audio_play_sound(FailSound,10,false); //Sonido de explosion
 	
 	
 }
@@ -82,7 +90,7 @@ if volando
 	image_xscale = lerp(image_xscale,1.5,0.1);
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,100,0.1);
-	if !instance_exists(obAlasCombo) instance_create_depth(x,y,1,obAlasCombo); //Alas Combo
+	if !instance_exists(obAlasCombo) instance_create_depth(x,y,10,obAlasCombo); //Alas Combo
 }
 else
 {
@@ -90,3 +98,4 @@ else
 	image_yscale = image_xscale;
 	sombraX = lerp(sombraX,10,0.1);
 }
+

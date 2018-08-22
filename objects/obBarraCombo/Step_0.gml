@@ -2,7 +2,7 @@
 if obPlayer.volando 
 {
 	audio_sound_pitch(sndHappy,1.3) //	MUSICA ACELERADA
-	obControl.combo -= 1/7;
+	obControl.combo -= 1/10;
 	if instance_exists(obNormalCar) obNormalCar.velocidad = 150; //Aumentar la velocidad de los carros
 }
 else

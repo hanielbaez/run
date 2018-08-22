@@ -15,7 +15,8 @@
         "9ac1f80d-d5fa-4cc0-bb6d-5f2ee3b592c6",
         "e9a68f0f-08c1-46f3-a4ea-b9affbe56749",
         "e297fefa-afb4-4766-a4ee-c3d2acdb3414",
-        "81c32c28-0633-457b-9b62-0a4ceee6216b"
+        "81c32c28-0633-457b-9b62-0a4ceee6216b",
+        "37ff8bff-db85-4ba7-8240-de55d8e771ae"
     ],
     "IsDnD": false,
     "layers": [
@@ -129,13 +130,39 @@
             "visible": true
         },
         {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Road",
+            "id": "e0424f48-e572-4cac-ad3c-aa93d38aebf8",
+            "depth": 400,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_A35CBA4","id": "37ff8bff-db85-4ba7-8240-de55d8e771ae","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_A35CBA4","objId": "47588ea0-03da-49ba-8826-73bd9e02c3df","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 460,"y": -1}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Pista",
             "id": "292aa826-6b0f-4a0d-860e-3d736b7f5d53",
             "animationFPS": 3,
             "animationSpeedType": "0",
-            "colour": { "Value": 4294967295 },
-            "depth": 400,
+            "colour": { "Value": 4283190348 },
+            "depth": 500,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -153,7 +180,7 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "eeadb59f-842d-4987-81c3-785f005c59fc",
+            "spriteId": "00000000-0000-0000-0000-000000000000",
             "stretch": false,
             "userdefined_animFPS": false,
             "userdefined_depth": false,
