@@ -30,11 +30,10 @@ if (room == room0)
 			
 			for (var i = random_range(3,6);i>0;i--)
 			{
-				if place_free(xAleatorio,yAleatorio) instance_create_depth(xAleatorio,yAleatorio,depth-10,obMoneda);
+			    instance_create_depth(xAleatorio,yAleatorio,depth+1,obMoneda);
 				xAleatorio = xAleatorio+100*PoN;
 				xAleatorio = clamp(xAleatorio,360,630)
 				yAleatorio = yAleatorio+100;
-				
 			}
 	}
 }

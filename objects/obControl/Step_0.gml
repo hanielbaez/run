@@ -43,6 +43,8 @@ if room == room0
 			var transicionTemporal
 			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
 			transicionTemporal.irA = roomPrincipal;
+			global.distancia = 0;
+			global.indexPista = 0;
 			combo = 0;
 		}
 	}
@@ -55,6 +57,8 @@ if room == room0
 		obGUI.puntuacion = 0;
 		obGUI.monedas = 0;
 		obControl.combo = 0;
+		global.distancia = 0;
+		global.indexPista = 0;
 		room_restart();
 	}
 
@@ -62,4 +66,20 @@ if room == room0
 else
 {
 	gameOver = false;
+}
+
+switch(global.distancia)
+{
+	case 50:
+		global.indexPista = 1;
+		break;
+	case 150:
+		global.indexPista = 2;
+		break;
+	case 300:
+		global.indexPista = 3;
+		break;
+	case 600:
+		global.indexPista = 4;
+		break;
 }

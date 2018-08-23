@@ -9,7 +9,7 @@ if obControl.gameOver && soloUnaVez
 	}
 	else
 	{
-		if !audio_is_playing(sndVictoria) audio_play_sound(sndVictoria,10,0);
+		if !audio_is_playing(sndVictoria) && obControl.music == 1 audio_play_sound(sndVictoria,10,0);
 	}
 
 	instance_create_depth(600,96,-999,obHome); //Boton ir a Home

@@ -42,8 +42,8 @@ if obControl.gameOver
 		}
 	
 		draw_set_halign(fa_center);
-		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-320,theScore,2,2,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
-		draw_text_transformed_color(global.room_halfx-80,global.room_halfy-300,theScore,2,2,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
+		draw_text_transformed_color(global.room_halfx-120,global.room_halfy-320,theScore,2,2,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
+		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,theScore,2,2,image_angle,c_white,c_white,c_white,c_white,1);	//Puntuacion
 	}
 
 if room == roomPrincipal 

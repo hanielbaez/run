@@ -1,4 +1,6 @@
 ///@description Acciones del player
+
+
 if  iniciarJuego
 {
 	//Moverse hasta el punto de inicio
@@ -46,11 +48,12 @@ else
 							sndTryItAgain,sndWannaGiveUp,sndWashOut,sndWhatShame,sndWhaHaveDone,sndWrongWay,sndYouDied,sndYuoFailed,
 							sndYuoFailedTwo,sndYouGoWrong,sndYouSuck,sndYouWereDefeat,sndYouWereDefeat,sndYouAreOut);
 	
-	//if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
-	//{
-	//	audio_play_sound()
-	//}
-	//audio_play_sound(FailSound,10,false); //Sonido de explosion
+	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
+	{
+		audio_play_sound(sndCrash,1,false); //Crash car
+		audio_play_sound(FailSound,10,false); //Sonido de explosion
+	}
+	
 	
 	
 }
