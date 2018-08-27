@@ -1,3 +1,3 @@
 /// @description Destruir la explosion
-if image_index == 60 instance_destroy();
+if image_index >= 63 instance_destroy();
 

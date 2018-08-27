@@ -1,5 +1,5 @@
 ///Inicializando variables
-velocidad = 25;
+velocidad = 12.5;
 
 //Crear obMasPuntos
 if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,obMasPunto);

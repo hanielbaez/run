@@ -12,6 +12,7 @@ iniciarJuego = true;
 volando = false;
 
 
+
 yInicial = 750;
 x = 452;
 y = room_height;
@@ -80,7 +81,7 @@ systemRastro = part_system_create();
 part_system_automatic_draw(systemRastro,false);
 
 partRastro = part_type_create();
-part_type_sprite(partRastro,spSuperCar01,false,false,false);
+part_type_sprite(partRastro,sprite_index,false,false,false);
 part_type_blend(partRastro,true);
 part_type_alpha2(partRastro,.7,.1);
 part_type_life(partRastro,10,10);

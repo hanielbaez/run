@@ -1,5 +1,5 @@
 ///@description Comenzar a crear carros pasados 3 segundos.
-maxTime = 300;
+maxTime = 200;
 
 if room = room0 
 {

@@ -21,6 +21,7 @@ if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {	
 	obPlayer.colision = true;
 	instance_destroy(obMasPunto);
+	image_blend = c_dkgray;
 }
 
 if image_index >= 13 && instance_exists(obPlayer)

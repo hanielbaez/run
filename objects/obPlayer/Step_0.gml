@@ -26,8 +26,18 @@ if (!colision)
 	}
 	
 	//Rastro de velocidad
-	part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
-	part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
+	if !instance_exists(obAmbulancia)
+	{
+		
+		//part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
+		//part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
+	}
+	else
+	{
+		part_particles_clear(systemRastro)
+	}
+	
+	
 }
 else
 {
@@ -60,9 +70,9 @@ else
 
 ///Aplicar movimiento en el eje X
 x = xDireccion*20 + x;
-
+x = clamp(x,290,640);
 ///Angulo
-if xDireccion != 0
+if xDireccion != 0 && !(x <= 290 || x >= 640)
 {
 	image_angle -= xDireccion*5;
 	image_angle = clamp(image_angle,-35,35);

@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "22ec1092-ccc3-48c1-b37b-8f74ccbc6ff9",
+            "Value": {
+                "id": "519504a2-8847-4700-ba8c-35411b5f876c",
+                "resourcePath": "objects\\obAmbulanceI\\obAmbulanceI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "26a0a792-f9c2-44b5-a50c-e69085513969",
             "Value": {
                 "id": "fde058b7-2f87-49a5-b336-aa55160f671a",
@@ -259,6 +267,14 @@
             "Value": {
                 "id": "ba09b22a-4015-4097-aa3e-393483c78803",
                 "resourcePath": "sprites\\spNoAD\\spNoAD.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2df6f520-3444-4683-9b01-59e06dea93fb",
+            "Value": {
+                "id": "4189aa23-6deb-4636-9020-a5bfdc1114e6",
+                "resourcePath": "sprites\\spAmbulancia\\spAmbulancia.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -535,6 +551,14 @@
             }
         },
         {
+            "Key": "5e73620a-f8e3-4667-b998-1844f9430dbd",
+            "Value": {
+                "id": "fdb9c340-a489-4f93-8603-0d7296fdc7d8",
+                "resourcePath": "objects\\obEfectPawers\\obEfectPawers.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6382d3a2-c417-49e0-b8cb-973dc2787d1b",
             "Value": {
                 "id": "e5189db8-2087-4a83-90b3-3ef2b2fb967a",
@@ -583,6 +607,14 @@
             }
         },
         {
+            "Key": "6cface5c-5bc4-4505-afba-2aa04d881f55",
+            "Value": {
+                "id": "e7cb5e38-553a-4da2-b6eb-73aa409df1a8",
+                "resourcePath": "sprites\\spImanEfect\\spImanEfect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d4ba1a3-d81b-476d-8645-db7be4f164a9",
             "Value": {
                 "id": "402948ab-780c-4121-a78e-cf19b40861cd",
@@ -595,6 +627,14 @@
             "Value": {
                 "id": "851757d4-e6f6-438a-b4f8-861a14544127",
                 "resourcePath": "objects\\obExplosion\\obExplosion.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "702319af-8b84-4372-b1dc-b527fd3a5edb",
+            "Value": {
+                "id": "bbc6b5a0-2dfb-4aa5-8f09-4a059feb4676",
+                "resourcePath": "objects\\obAmbulancia\\obAmbulancia.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -740,6 +780,14 @@
                 "id": "7f1f9856-51e8-44dc-bdfa-2f1c79166893",
                 "resourcePath": "views\\9cb5be07-55cd-4a44-a9de-1c347a1d694a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a0e80916-5c54-4a1b-b707-43fbf4d05f6d",
+            "Value": {
+                "id": "d25e2d18-e451-4fa1-ba25-450047776538",
+                "resourcePath": "sounds\\sndSiren\\sndSiren.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -911,6 +959,14 @@
             }
         },
         {
+            "Key": "c03d7529-4499-4cd5-b79c-a21400860da5",
+            "Value": {
+                "id": "ee5227f2-8bab-4ba6-93dd-115fb444d1bf",
+                "resourcePath": "sprites\\spBulletIc\\spBulletIc.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c0b26ccb-c34f-4b95-a675-1179fcd9f4a7",
             "Value": {
                 "id": "3038f794-8425-4d6f-934f-cacb337c6721",
@@ -975,6 +1031,14 @@
             }
         },
         {
+            "Key": "c9cc22ec-a6de-4b8d-a79f-17ac39519e25",
+            "Value": {
+                "id": "81ecc857-6d69-4fea-88e6-6eede5990ce7",
+                "resourcePath": "sprites\\spAmbulanceIcon\\spAmbulanceIcon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cb8628a2-0e4b-43eb-82b5-413b4b81dab7",
             "Value": {
                 "id": "ceadcc08-91ad-4cd2-a285-bba2d44a806a",
@@ -1020,6 +1084,14 @@
                 "id": "958b0a71-b68d-47e7-a4f4-8cc3b4d9bd1e",
                 "resourcePath": "sprites\\spBuyCar\\spBuyCar.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d24269f2-eccc-456a-9f44-811755d6927a",
+            "Value": {
+                "id": "1d940178-4399-4c4e-ad45-6fdde07476b0",
+                "resourcePath": "objects\\obEfectIman\\obEfectIman.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1079,11 +1151,35 @@
             }
         },
         {
+            "Key": "e199295b-93cb-416a-a81c-737e24c80b98",
+            "Value": {
+                "id": "fec0ffa0-2351-4f02-b163-b09ee256f446",
+                "resourcePath": "sounds\\sndPowerUp\\sndPowerUp.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e1e6a97b-3a93-466a-a990-36824f607dac",
+            "Value": {
+                "id": "5992aeed-d570-4e8a-9aa7-f178bb569da6",
+                "resourcePath": "sprites\\spEfectPowers\\spEfectPowers.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e37bb8a2-a0ec-4660-bd0d-25fadbe5631b",
             "Value": {
                 "id": "aaaa0cf1-f9c3-4a2c-82d3-dc63f96d05e9",
                 "resourcePath": "sounds\\sndYouSuck\\sndYouSuck.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e3cb7176-41aa-4f18-8cc3-ccb576e94dc1",
+            "Value": {
+                "id": "d9c312bc-ce74-4c84-9ede-9513d55ae037",
+                "resourcePath": "views\\e3cb7176-41aa-4f18-8cc3-ccb576e94dc1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1252,6 +1348,14 @@
                 "id": "d2492067-6ab6-4891-a3dc-e4ff03d71fc5",
                 "resourcePath": "objects\\obNoAD\\obNoAD.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fd3dc6eb-19c6-49fa-bacb-adb9469b6462",
+            "Value": {
+                "id": "51e01556-f232-4844-9a09-15a9d7cf49b9",
+                "resourcePath": "views\\fd3dc6eb-19c6-49fa-bacb-adb9469b6462.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
