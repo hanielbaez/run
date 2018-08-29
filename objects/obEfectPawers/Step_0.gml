@@ -14,8 +14,16 @@ else
 	}
 	else
 	{
-		y-=20;
-		instance_destroy();
+		if instance_exists(obBulletIc)
+		{
+			x = obBulletIc.x;
+			y = obBulletIc.y;
+		}
+		else
+		{
+			y-=20;
+			instance_destroy();
+		}
 	}
 }
 

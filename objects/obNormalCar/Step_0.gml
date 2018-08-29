@@ -21,7 +21,9 @@ if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {	
 	obPlayer.colision = true;
 	instance_destroy(obMasPunto);
-	image_blend = c_dkgray;
+	instance_create_depth(x,y+sprite_height/2,obPlayer.depth-100,obExplosion);
+	if instance_exists(obMachineGun) instance_destroy(obMachineGun);
+	instance_destroy();
 }
 
 if image_index >= 13 && instance_exists(obPlayer)
@@ -33,6 +35,24 @@ if image_index >= 13 && instance_exists(obPlayer)
 			audio_play_sound(sndTruck,1,false);
 		}
 	}
+}
+
+if place_meeting(x,y,obBullet) //Bullet hit
+{
+	destroyBullet = instance_nearest(x,y,obBullet)
+	image_blend = c_red;
+	instance_destroy(destroyBullet);
+	life--;
+}
+else
+{
+	image_blend = c_white;
+}
+
+if life <= 0 
+{
+	instance_create_depth(x,y+sprite_height/2,obNormalCar.depth-1,obExplosion);
+	instance_destroy();
 }
 
 //t = (t + increment) mod 360;

@@ -1,5 +1,5 @@
 /// @description Moverse a la misma velocida que los otros carros
-velocidad = obNormalCar.velocidad;
+if instance_exists(obNormalCar) velocidad = obNormalCar.velocidad;
 
 if !obControl.gameOver
 {

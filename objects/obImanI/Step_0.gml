@@ -3,7 +3,7 @@
 if (x <= 225 || x >= 690) xDireccion = xDireccion*-1;
 
 x +=xVelocidad*xDireccion;
-image_angle += 10*xDireccion;
+//image_angle += 10*xDireccion;
 y+=15;
 
-if y > room_height instance_destroy();
+//if y > room_height instance_destroy();

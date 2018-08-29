@@ -44,8 +44,8 @@ else
 	if !obControl.gameOver obCamara.agitar = 200;
 	instance_create_depth(x,y,-1,obExplosion);
 	alarm[0] = 15; 
-	x = -300;
-	y = -600;
+	//x = -500;
+	y = 2500;
 	colision = false;
 	
 	//Deterner sonidos
@@ -60,7 +60,6 @@ else
 	
 	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
 	{
-		audio_play_sound(sndCrash,1,false); //Crash car
 		audio_play_sound(FailSound,10,false); //Sonido de explosion
 	}
 	

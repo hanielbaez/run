@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "3409649f-c877-41ce-b0cf-29f94b8f365e",
+            "Value": {
+                "id": "5b1cdba5-b486-422f-98c5-8cc4171c3739",
+                "resourcePath": "objects\\obBullet\\obBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "342abc47-9f07-4077-b7aa-340a6e57589a",
             "Value": {
                 "id": "51a38192-c9d3-4ffa-b544-a25ecfcb0014",
@@ -332,6 +340,14 @@
                 "id": "11028203-fd4a-43e4-9012-8eac3578bb91",
                 "resourcePath": "sounds\\sndNextTime\\sndNextTime.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "37a78bc4-3862-4427-92eb-e3c395e909f2",
+            "Value": {
+                "id": "22d55e36-2654-4c5b-aabb-024a664165aa",
+                "resourcePath": "objects\\obBulletIc\\obBulletIc.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -783,6 +799,14 @@
             }
         },
         {
+            "Key": "9e89db1f-8532-4c04-ac1a-09f4cb90076f",
+            "Value": {
+                "id": "b70c7e55-94eb-4b48-8df6-aa78a62da51c",
+                "resourcePath": "sounds\\sndShootSound\\sndShootSound.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "a0e80916-5c54-4a1b-b707-43fbf4d05f6d",
             "Value": {
                 "id": "d25e2d18-e451-4fa1-ba25-450047776538",
@@ -1031,6 +1055,14 @@
             }
         },
         {
+            "Key": "c9168cde-1f7f-40ce-815c-f3692d77e4cd",
+            "Value": {
+                "id": "d9da1be0-e59c-4539-88fa-a97c5e8d678c",
+                "resourcePath": "objects\\obMachineGun\\obMachineGun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c9cc22ec-a6de-4b8d-a79f-17ac39519e25",
             "Value": {
                 "id": "81ecc857-6d69-4fea-88e6-6eede5990ce7",
@@ -1060,6 +1092,14 @@
                 "id": "b6df9643-7f7b-4e3e-b035-ff3d2e997cc7",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd63f9df-4e1a-4e1c-ad4d-ba0efafff58d",
+            "Value": {
+                "id": "e9f12cd8-7d84-4a04-a83a-70c7f3e09e18",
+                "resourcePath": "sprites\\spMachinGun\\spMachinGun.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1100,6 +1140,14 @@
                 "id": "861129fa-67de-4796-bfa5-e0b349504cd7",
                 "resourcePath": "sounds\\sndCoin\\sndCoin.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d6e73217-92d5-44d6-9c6c-3564634c8b86",
+            "Value": {
+                "id": "84c3c6be-f467-406d-b4a4-bdbb543a5999",
+                "resourcePath": "sprites\\spBullet\\spBullet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

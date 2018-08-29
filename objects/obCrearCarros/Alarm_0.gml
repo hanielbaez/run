@@ -5,8 +5,6 @@ yInicial = -2000;
 randomize();
 
 instance_create_depth(xInicial, yInicial, 301, obNormalCar);
-//instance_create_depth(global.room_halfx, yInicial, 301, obPista);
-//instance_create_depth(xInicial, yInicial, 301, obImanI);
 
 if !obControl.gameOver && instance_exists(obPlayer)
 {
@@ -14,3 +12,6 @@ if !obControl.gameOver && instance_exists(obPlayer)
 	maxTime-=65/100
 	maxTime = clamp(maxTime,35,100)
 }
+
+selectPower = choose(obImanI,obAmbulanceI,obBulletIc);
+instance_create_depth(460,-50,301,selectPower);

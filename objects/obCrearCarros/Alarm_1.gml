@@ -1,7 +1,4 @@
 /// @description Insert description here
-// You can write your code in this editor
-//if obPista.x >= global.room_halfx 
-//{
-//		instance_create_depth(global.room_halfx, yInicial, 301, obPista);
-//		alarm[1] = 2;
-//}
+selectPower = choose(obImanI,obAmbulanceI,obBulletIc);
+instance_create_depth(460,200,301,selectPower);
+alarm[1] = room_speed;
