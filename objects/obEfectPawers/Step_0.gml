@@ -30,8 +30,8 @@ else
 
 
 
-if place_meeting(x,y,obPlayer) ||  y > room_height 
-{
-	image_alpha-=.1
-	instance_destroy();
-}
+//if place_meeting(x,y,obPlayer) ||  y > room_height 
+//{
+//	image_alpha-=.1
+//	instance_destroy();
+//}

@@ -29,8 +29,8 @@ if (!colision)
 	if !instance_exists(obAmbulancia)
 	{
 		
-		//part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
-		//part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
+		part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
+		part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
 	}
 	else
 	{

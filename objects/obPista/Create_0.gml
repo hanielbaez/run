@@ -4,3 +4,4 @@ image_index = global.indexPista;
 oneTime = true; //Make just one road
 obGUI.puntuacion++;
 global.distancia++;
+saving();

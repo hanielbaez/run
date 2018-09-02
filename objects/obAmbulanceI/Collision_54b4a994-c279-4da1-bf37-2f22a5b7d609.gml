@@ -3,6 +3,6 @@
 with(obPlayer)
 	{
 		if obControl.music == 1 audio_play_sound(sndPowerUp,10,false);
-		instance_create_depth(x,y,obPlayer.depth-1,obAmbulancia)
+		instance_create_depth(x,y,obPlayer.depth-1,obAmbulancia);
 	}
 instance_destroy();

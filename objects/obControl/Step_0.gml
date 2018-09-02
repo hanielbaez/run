@@ -28,6 +28,12 @@ if room == roomPrincipal
 			if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,1);
 		}	
 	}
+	
+	if keyboard_check_released(ord("L"))
+	{
+		achievement_show_leaderboards()
+	}
+	
 }
 	
 //Teclas virtuales en room0
@@ -43,6 +49,7 @@ if room == room0
 			var transicionTemporal
 			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
 			transicionTemporal.irA = roomPrincipal;
+			if audio_is_playing(sndVictoria) audio_stop_sound(sndVictoria);
 			global.distancia = 0;
 			global.indexPista = 0;
 			combo = 0;
@@ -59,6 +66,7 @@ if room == room0
 		obControl.combo = 0;
 		global.distancia = 0;
 		global.indexPista = 0;
+		if audio_is_playing(sndVictoria) audio_stop_sound(sndVictoria);
 		room_restart();
 	}
 

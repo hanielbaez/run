@@ -6,7 +6,7 @@ if keyboard_check(vk_right)
 }
 else
 {
-	image_alpha = .5;
+	image_alpha = .2;
 }
 
 //Eliminar virtual key

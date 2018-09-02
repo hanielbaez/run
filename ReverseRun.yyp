@@ -1383,6 +1383,14 @@
             }
         },
         {
+            "Key": "f90e051e-c7b2-435d-9fad-7d7a6debb164",
+            "Value": {
+                "id": "7233d1f6-e752-464e-bf4b-2cc0696979b6",
+                "resourcePath": "extensions\\GooglePlayServicesExtension\\GooglePlayServicesExtension.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "f9e60e5f-9d71-4158-a320-b308de65236c",
             "Value": {
                 "id": "252e1438-8e1e-4507-84c4-b5a880e19e3e",

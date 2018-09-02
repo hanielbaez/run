@@ -1,4 +1,6 @@
-/// @description Insert description here
+/// @description Make a powerUP
+randomize();
 selectPower = choose(obImanI,obAmbulanceI,obBulletIc);
-instance_create_depth(460,200,301,selectPower);
-alarm[1] = room_speed;
+if global.powerState instance_create_depth(460,-200,299,selectPower);
+global.powerState  = false;
+if !obControl.gameOver alarm[1] = room_speed*random_range(20,35);

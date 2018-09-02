@@ -48,8 +48,8 @@ if obControl.gameOver
 
 if room == roomPrincipal 
 {	
-	
-	//draw_text_transformed_color(global.room_halfx-100,global.room_halfy-150,"BEST",1.5,1.5,image_angle,c_white,c_white,c_yellow,c_yellow,1);
+	draw_set_halign(fa_center);
+	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-200,"BEST",.8,.8,image_angle,c_white,c_white,c_yellow,c_yellow,1);
 }
 
 //Best Score
@@ -76,6 +76,7 @@ if obControl.gameOver
 		draw_text_transformed_color(global.room_halfx-100,global.room_halfy-200,"BEST: " + string(mejorPuntuacion),.7,.7,image_angle,c_yellow,c_white,c_yellow,c_white,1);
 	}
 }
+
 
 //Monedas
 draw_set_halign(fa_left);
