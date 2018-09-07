@@ -2,6 +2,7 @@
 sombraX = 10;
 sombraY = sombraX;
 AudioSpitch = 1;
+velocidad = 12.5;
 
 image_alpha = 1;
 

@@ -2,11 +2,11 @@
 // You can write your code in this editor
 if keyboard_check(vk_left)
 {
-	image_alpha = 1;
+	image_alpha = .1;
 }
 else
 {
-	image_alpha = .2;
+	image_alpha = 0;
 }
 
 //Eliminar virtual key

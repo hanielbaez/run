@@ -1,5 +1,4 @@
 /// @description Crear carros cada X frame
-
 xInicial = irandom_range(290, 640);
 yInicial = -2000;
 randomize();

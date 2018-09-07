@@ -21,18 +21,10 @@ if place_meeting(x,y,obPlayer)
 	instance_destroy();
 }
 
-//if obPlayer.volando 
-//{
-//	image_xscale = 1.5;
-//	image_yscale = image_yscale;
-//	sombraX = 30;
-//	sombraY = sombraX;
-//}	
-
 if instance_exists(obTorretaMagneto) && !obControl.gameOver
 {
 	move_towards_point(obPlayer.x,obPlayer.y,40);
 }
 
 //Destruir moneda 
-if y >= room_height /*|| place_meeting(x,y,obNormalCar)*/ instance_destroy();
+if y >= room_height instance_destroy();

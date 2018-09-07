@@ -10,7 +10,7 @@ with(obNormalCar)
 	{
 		var dirx = sign(x - obAmbulancia.x)
 		
-		x += 8*dirx;
+		x += 9*dirx;
 		x = clamp(x,290, 640);
 	}
 }

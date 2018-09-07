@@ -1,2 +1,9 @@
 /// @description Declare variable
-velocidad = obNormalCar.velocidad;
+if instance_exists(obNormalCar) 
+{
+	velocidad = obNormalCar.velocidad;
+}
+else
+{
+	velocidad = 12.6
+}

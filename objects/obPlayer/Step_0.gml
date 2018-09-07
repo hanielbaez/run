@@ -1,6 +1,4 @@
 ///@description Acciones del player
-
-
 if  iniciarJuego
 {
 	//Moverse hasta el punto de inicio
@@ -21,14 +19,13 @@ if (!colision)
 {
 	//Controles Derecha y izquierda (INVERTIDOS)
 	if puedeMoverse 
-	{
+	{		
 		xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
 	}
 	
 	//Rastro de velocidad
 	if !instance_exists(obAmbulancia)
 	{
-		
 		part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
 		part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
 	}
@@ -36,34 +33,21 @@ if (!colision)
 	{
 		part_particles_clear(systemRastro)
 	}
-	
-	
 }
 else
 {
-	if !obControl.gameOver obCamara.agitar = 200;
-	instance_create_depth(x,y,-1,obExplosion);
+	if !obControl.gameOver obCamara.agitar = 100;
 	alarm[0] = 15; 
 	//x = -500;
 	y = 2500;
 	colision = false;
-	
-	//Deterner sonidos
-	audio_stop_all();
-	
-	var FailSound = choose(sndBadOutCome,sndBreakdown,sndCompleteFailure,sndDeadDuck,sndDisaster,sndDownFall,sndEpicFail,
-							sndFail,sndFailure,sndFlameOut,sndGameOver,sndItOver,sndLoser,sndNeedPractice,sndNextTime,
-							sndNoTwo,sndNoFaith,sndNoMan,sndNoNoNo,sndNo,sndNoThisWay,sndOneMistake,sndOuch,sndRidiculous,
-							sndSoBad,sndStarItOver,sndTerrible,sndTerribleTwo,sndThatIsFail,sndThatMistake,sndThaIsError,sndTooBad,
-							sndTryItAgain,sndWannaGiveUp,sndWashOut,sndWhatShame,sndWhaHaveDone,sndWrongWay,sndYouDied,sndYuoFailed,
-							sndYuoFailedTwo,sndYouGoWrong,sndYouSuck,sndYouWereDefeat,sndYouWereDefeat,sndYouAreOut);
+	audio_stop_all(); 	//Deterner sonidos
+	instance_create_depth(x,y,-1,obExplosion);
 	
 	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
 	{
-		audio_play_sound(FailSound,10,false); //Sonido de explosion
+		alarm[1] = room_speed*2;
 	}
-	
-	
 	
 }
 

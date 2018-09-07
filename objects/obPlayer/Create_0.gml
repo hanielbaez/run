@@ -5,7 +5,6 @@ xDireccion = 0;
 xMovimiento = 0;
 sombraX = 10;
 
-
 puedeMoverse = false;
 colision = false;
 iniciarJuego = true;
@@ -87,6 +86,5 @@ part_type_alpha2(partRastro,.7,.1);
 part_type_life(partRastro,10,10);
 part_type_speed(partRastro,20,40,5,false);
 part_type_direction(partRastro,270,270,false,false);
-//part_type_gravity(partRastro,20,270);	
 
 emiteRastro = part_emitter_create(systemRastro)

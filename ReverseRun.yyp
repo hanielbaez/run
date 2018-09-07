@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "9fa1c06d-5a05-4289-8e78-6494b007f85d",
+            "Value": {
+                "id": "757607bb-6c77-4256-b42c-9871f8ff0bee",
+                "resourcePath": "objects\\obComboShow\\obComboShow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a0e80916-5c54-4a1b-b707-43fbf4d05f6d",
             "Value": {
                 "id": "d25e2d18-e451-4fa1-ba25-450047776538",
