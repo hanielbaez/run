@@ -82,7 +82,7 @@ part_system_automatic_draw(systemRastro,false);
 partRastro = part_type_create();
 part_type_sprite(partRastro,sprite_index,false,false,false);
 part_type_blend(partRastro,true);
-part_type_alpha2(partRastro,.7,.1);
+part_type_alpha2(partRastro,.5,0);
 part_type_life(partRastro,10,10);
 part_type_speed(partRastro,20,40,5,false);
 part_type_direction(partRastro,270,270,false,false);

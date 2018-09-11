@@ -26,5 +26,12 @@ if instance_exists(obTorretaMagneto) && !obControl.gameOver
 	move_towards_point(obPlayer.x,obPlayer.y,40);
 }
 
+t = (t + increment) mod 360;
+shift = amplitude * dsin(t);
+
+//clone the movement from the object's speed and direction
+xx += hspeed;
+x = xx + shift; //vertical wave motion
+
 //Destruir moneda 
 if y >= room_height instance_destroy();

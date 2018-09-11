@@ -78,16 +78,16 @@ else
 
 switch(global.distancia)
 {
-	case 30:
+	case 50:
 		global.indexPista = 1;
 		break;
-	case 60:
+	case 90:
 		global.indexPista = 2;
 		break;
-	case 120:
+	case 160:
 		global.indexPista = 3;
 		break;
-	case 240:
+	case 300:
 		global.indexPista = 4;
 		break;
 }

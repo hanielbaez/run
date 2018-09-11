@@ -39,10 +39,3 @@ if (room == room0)
 	}
 }
 
-/// @description Animacion del Logo
-t = 0;
-increment = random_range(5,10); //degrees -- freq = 1 oscillation per second (1Hz) in a 30 fps room
-amplitude = irandom(5); //pixels of peak oscillation
- 
-//clone the y-position (or use x instead if you're doing horizontal oscillation)
-xx = x;

@@ -46,7 +46,7 @@ else
 	
 	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
 	{
-		alarm[1] = room_speed*2;
+		alarm[1] = room_speed;
 	}
 	
 }
