@@ -1,5 +1,5 @@
 /// @description Delete-Velocity
-y += velocidad;
+y += obNormalCar.velocidad;;
 
 if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {

@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "0ea1ee19-fb26-495f-b7cf-e4874117e869",
+            "Value": {
+                "id": "ed0acd95-4792-4183-8eb6-43b0ee4f0167",
+                "resourcePath": "objects\\obCarLight\\obCarLight.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0fdafc1e-633a-4bd9-9e58-c219cf09eff4",
             "Value": {
                 "id": "0a82815f-8fca-4d32-bfd5-6511467d938d",
@@ -284,6 +292,14 @@
                 "id": "fde058b7-2f87-49a5-b336-aa55160f671a",
                 "resourcePath": "sounds\\sndLike\\sndLike.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "282eea5d-320a-4a02-9e14-cc7c4dbacd10",
+            "Value": {
+                "id": "01b885f2-aca1-4f33-bb81-1f79d6ef5adc",
+                "resourcePath": "objects\\obDayNight\\obDayNight.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -911,6 +927,14 @@
             }
         },
         {
+            "Key": "93a6a40e-69e4-46bb-8c1e-3e38fa67ca4b",
+            "Value": {
+                "id": "a8e06859-3cd7-4bb7-abbc-6037c2ceefaa",
+                "resourcePath": "sprites\\spCarLight\\spCarLight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "93e9f31b-5411-4efe-89e8-944c36cc08d8",
             "Value": {
                 "id": "04750590-30b3-44cd-b526-a9c7626e8eee",
@@ -1052,14 +1076,6 @@
                 "id": "4cd97c0d-4314-406b-b85f-19240d683e37",
                 "resourcePath": "views\\ab148885-25dc-4f18-9203-3138f33e6ea2.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "ab4201c5-a336-4af0-b833-0f2ede782cb2",
-            "Value": {
-                "id": "16092ff8-2fbd-4fad-be7a-27222f45bfb9",
-                "resourcePath": "objects\\obMuro\\obMuro.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1644,6 +1660,14 @@
                 "id": "d2492067-6ab6-4891-a3dc-e4ff03d71fc5",
                 "resourcePath": "objects\\obNoAD\\obNoAD.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fa9afdea-7080-4386-ae2c-62e5877ac3b0",
+            "Value": {
+                "id": "da17da37-cfbe-40a1-9e3e-252096e040e5",
+                "resourcePath": "sprites\\spTapHere\\spTapHere.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

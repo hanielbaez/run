@@ -1,23 +1,33 @@
 {
-    "id": "4eca4245-f7eb-49e7-acc0-475447afbba0",
+    "id": "282eea5d-320a-4a02-9e14-cc7c4dbacd10",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obSombra",
+    "name": "obDayNight",
     "eventList": [
         {
-            "id": "56844c75-20c1-46d3-a5c2-5f8a054a3f14",
+            "id": "dc68fb39-3b3e-4d42-941a-b4096b93615b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "282eea5d-320a-4a02-9e14-cc7c4dbacd10"
+        },
+        {
+            "id": "2c408cb0-189d-41bf-95b7-f8cc066174d0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "4eca4245-f7eb-49e7-acc0-475447afbba0"
+            "m_owner": "282eea5d-320a-4a02-9e14-cc7c4dbacd10"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "0ea1ee19-fb26-495f-b7cf-e4874117e869",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

@@ -52,6 +52,7 @@ if room == room0
 			if audio_is_playing(sndVictoria) audio_stop_sound(sndVictoria);
 			global.distancia = 0;
 			global.indexPista = 0;
+			global.coinF = 1;
 			combo = 0;
 		}
 	}
@@ -66,6 +67,7 @@ if room == room0
 		obControl.combo = 0;
 		global.distancia = 0;
 		global.indexPista = 0;
+		global.coinF = 1;
 		if audio_is_playing(sndVictoria) audio_stop_sound(sndVictoria);
 		room_restart();
 	}
@@ -78,16 +80,18 @@ else
 
 switch(global.distancia)
 {
-	case 50:
+	case 30:
 		global.indexPista = 1;
 		break;
-	case 90:
+	case 60:
 		global.indexPista = 2;
+		global.dayState = 1; //night
 		break;
-	case 160:
+	case 120:
 		global.indexPista = 3;
+		global.dayState = 0; //day
 		break;
-	case 300:
+	case 240:
 		global.indexPista = 4;
 		break;
 }

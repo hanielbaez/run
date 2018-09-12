@@ -95,3 +95,5 @@ else
 	sombraX = lerp(sombraX,10,0.1);
 }
 
+if distance_to_object(obMoneda) > 200 global.coinF = 1;
+

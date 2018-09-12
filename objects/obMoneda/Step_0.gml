@@ -17,6 +17,8 @@ if place_meeting(x,y,obPlayer)
 	part_emitter_burst(partMonedaSystem,partMonedaEmisor, partMonedas, 1);
 	effect_create_above(ef_firework,160,75,5,c_yellow);
 	obGUI.monedas++;
+	audio_sound_pitch(sndCoin,global.coinF)
+	global.coinF+=.1;
 	if  obControl.music == 1 audio_play_sound(sndCoin,2,false);
 	instance_destroy();
 }

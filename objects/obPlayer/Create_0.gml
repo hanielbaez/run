@@ -4,6 +4,7 @@ velocidad = 33.75;
 xDireccion = 0;
 xMovimiento = 0;
 sombraX = 10;
+timeCoinF = 0;
 
 puedeMoverse = false;
 colision = false;
@@ -26,7 +27,7 @@ part_type_direction(particula_derrape,240,300,false,1);
 part_type_speed(particula_derrape,30,30,false,false);
 part_type_color2(particula_derrape,c_gray,c_white);
 part_type_alpha2(particula_derrape,1,0);
-part_type_size(particula_derrape,0.1,2,.01,false);
+part_type_size(particula_derrape,0.1,3,.01,false);
 part_type_life(particula_derrape,5,15)
 
 particula_derrape2 = part_type_create();//Particula
