@@ -1,5 +1,5 @@
 ///@description Comenzar a crear carros pasados 3 segundos.
-maxTime = 100;
+maxTime = 200;
 global.powerState = true;
 
 if room = room0 

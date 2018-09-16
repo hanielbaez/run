@@ -59,7 +59,7 @@ if obControl.gameOver
 	if  (mejorPuntuacion <= puntuacion) && puntuacion >= 100
 	{
 		draw_set_halign(fa_center); //winner chicken dinner
-		draw_text_transformed_color(global.room_halfx-100,200,"YOU ARE"+chr(13)+"THE"+chr(13)+"MAN!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);
+		draw_text_transformed_color(global.room_halfx-100,200,"YOU ARE"+chr(13)+"THE"+chr(13)+"BOSS!!!",2,2,0,c_white,c_yellow,c_white,c_yellow,1);
 		
 		//Confetti
 		part_system_drawit(systemConfety);

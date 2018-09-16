@@ -391,14 +391,6 @@
             }
         },
         {
-            "Key": "35b8d82e-f4b6-4644-97af-51bb71429510",
-            "Value": {
-                "id": "4ea854d2-de84-4f91-9fe9-403cc5f58e97",
-                "resourcePath": "sprites\\spDerecha\\spDerecha.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3722c537-e3ae-4906-b9b1-ea378d08f94c",
             "Value": {
                 "id": "11028203-fd4a-43e4-9012-8eac3578bb91",
@@ -479,19 +471,19 @@
             }
         },
         {
-            "Key": "42944165-636a-4a9a-9f5c-73750da69dc6",
-            "Value": {
-                "id": "5274abd1-a1c9-48ca-9db8-0dd44995670f",
-                "resourcePath": "views\\42944165-636a-4a9a-9f5c-73750da69dc6.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "439965f1-dddb-4089-b215-ad50f809b480",
             "Value": {
                 "id": "31ff053d-8dd9-443d-b367-d050bb6ba8df",
                 "resourcePath": "views\\439965f1-dddb-4089-b215-ad50f809b480.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4596e6ca-f94b-40dd-8f74-e167266ecc46",
+            "Value": {
+                "id": "16912b33-54c6-433d-bbc5-e6b7270db24f",
+                "resourcePath": "sprites\\sprite42\\sprite42.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -786,7 +778,7 @@
             "Key": "74e64084-0a53-4e12-ae8a-3071514279db",
             "Value": {
                 "id": "db281f48-70d6-44de-a3ea-a3e9acfb6be1",
-                "resourcePath": "sprites\\spIsquierda\\spIsquierda.yy",
+                "resourcePath": "sprites\\spDireccion\\spDireccion.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -1,5 +1,13 @@
 /// @description Delete-Velocity
-y += obNormalCar.velocidad;;
+if instance_exists(obNormalCar)
+{
+	y += obNormalCar.velocidad;
+}
+else
+{
+	y += 40;
+}
+
 
 if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {

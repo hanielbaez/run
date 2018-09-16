@@ -5,7 +5,7 @@ randomize();
 
 instance_create_depth(xInicial, yInicial, 301, obNormalCar);
 
-if !obControl.gameOver && instance_exists(obPlayer)
+if !obControl.gameOver && instance_exists(obPlayer) 
 {
 	alarm[0] = irandom_range(25,maxTime);
 	maxTime-=65/100
