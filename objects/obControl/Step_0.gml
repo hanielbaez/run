@@ -27,6 +27,7 @@ if room == roomPrincipal
 		{
 			if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,1);
 		}	
+	
 	}
 	
 	if keyboard_check_released(ord("L"))
@@ -84,18 +85,18 @@ else
 
 switch(global.distancia)
 {
-	case 35:
+	case 40:
 		global.indexPista = 1;
 		break;
-	case 70:
+	case 80:
 		global.indexPista = 2;
 		global.dayState = 1; //night
 		break;
-	case 140:
+	case 160:
 		global.indexPista = 3;
 		global.dayState = 0; //day
 		break;
-	case 280:
+	case 320:
 		global.indexPista = 4;
 		break;
 }

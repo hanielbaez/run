@@ -1,9 +1,9 @@
 //Declarando Variables para la GUI
 puntuacion = 0;
 mejorPuntuacion = 0;
-Load(); //Cargar puntuacion
 monedas = 0;
 monedasTotal = 0;
+Load(); //Cargar puntuacion
 
 dosSegundos = 2;
 activarGameOver = false;

@@ -83,9 +83,14 @@ draw_set_halign(fa_left);
 draw_sprite_ext(spMoneda,0,60,86,.7,.7,0,c_black,.5); //Sombra
 draw_sprite_ext(spMoneda,0,70,96,.7,.7,0,-1,1);
 
-if room != room0 monedas = monedasTotal;
-draw_text_transformed_color(100,70,string(monedas),.7,.7,image_angle,c_black,c_black,c_black,c_black,.5);
-draw_text_transformed_color(110,80,string(monedas),.7,.7,image_angle,c_yellow,c_yellow,c_yellow,c_yellow,1);
+var temporalMoneda = monedas;
+if room == roomPrincipal
+{
+	temporalMoneda = monedasTotal;
+}
+
+draw_text_transformed_color(100,70,string(temporalMoneda),.7,.7,image_angle,c_black,c_black,c_black,c_black,.5);
+draw_text_transformed_color(110,80,string(temporalMoneda),.7,.7,image_angle,c_yellow,c_yellow,c_yellow,c_yellow,1);
 
 //Resetiar opacidad
 draw_set_alpha(1);
