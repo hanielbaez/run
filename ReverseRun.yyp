@@ -687,6 +687,14 @@
             }
         },
         {
+            "Key": "66d731c2-2487-4147-aa26-74521dac0dab",
+            "Value": {
+                "id": "40adfef9-30b9-4d8f-b1eb-38de736e2691",
+                "resourcePath": "sprites\\spCorazon\\spCorazon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6805017d-c82d-446b-9e09-9ad917a7fd12",
             "Value": {
                 "id": "68d66200-c9c7-4400-8301-7ac01c35c8a1",

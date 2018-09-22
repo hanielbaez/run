@@ -1,12 +1,17 @@
 /// @description Insert description here
-// You can write your code in this editor
-if global.indexPista == 2
+if global.indexPista == 3
 {
 	part_emitter_stream(psRain,emiRain,partRain,5);
 }
 else 
 {
-	visible = false;
+	//visible = false;
 }
 
-if obControl.gameOver || global.indexPista > 2 part_system_destroy(psRain);
+if obControl.gameOver || global.indexPista > 3 
+{
+	part_emitter_destroy(psRain,emiRain);
+	part_system_destroy(psRain);
+	instance_destroy();
+}
+

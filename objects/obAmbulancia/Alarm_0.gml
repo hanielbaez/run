@@ -3,4 +3,5 @@
 obPlayer.visible = true;
 audio_stop_sound(sndSiren);
 global.powerState  = true;
+part_system_destroy(partCorazonSytem);
 instance_destroy();

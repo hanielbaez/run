@@ -1,4 +1,4 @@
-/// @description Rain or Snow
+///// @description Rain or Snow
 numHalfV = sprite_width div 2;
 numHalfH = sprite_height div 2;
 

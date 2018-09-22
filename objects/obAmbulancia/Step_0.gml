@@ -15,6 +15,7 @@ with(obNormalCar)
 	}
 }
 
-
+part_emitter_region(partCorazonSytem,emiterCorazon,x,x-20,y,y-20,ps_shape_rectangle,ps_distr_gaussian)
+part_emitter_stream(partCorazonSytem,emiterCorazon,partCorazon,1);
 
 	

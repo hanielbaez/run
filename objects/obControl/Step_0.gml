@@ -85,18 +85,27 @@ else
 
 switch(global.distancia)
 {
-	case 40:
+	case 20:
 		global.indexPista = 1;
 		break;
-	case 80:
+	case 40:
 		global.indexPista = 2;
+		break;
+	case 80:
+		global.indexPista = 3;
 		global.dayState = 1; //night
 		break;
 	case 160:
-		global.indexPista = 3;
+		global.indexPista = 4;
 		global.dayState = 0; //day
 		break;
 	case 320:
-		global.indexPista = 4;
+		global.indexPista = 5;
+		break;
+	case 500:
+		global.indexPista = 6;
+		break;
+	case 800:
+		global.indexPista = 7;
 		break;
 }
