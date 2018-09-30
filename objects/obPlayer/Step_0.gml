@@ -42,7 +42,14 @@ else
 	y = 2500;
 	colision = false;
 	audio_stop_all(); 	//Deterner sonidos
-	instance_create_depth(x,y,-1,obExplosion);
+	if SplashSound == false
+	{
+		instance_create_depth(x,y,-1,obExplosion);
+	}
+	else
+	{
+		if !audio_is_playing(sndSplash) && obControl.music == 1 audio_play_sound(sndSplash,2,false); //Sonido de derrape
+	}
 	
 	if obControl.music == 1 && !(obGUI.mejorPuntuacion <= obGUI.puntuacion) 
 	{
@@ -53,8 +60,9 @@ else
 
 ///Aplicar movimiento en el eje X
 x = xDireccion*20 + x;
-x = clamp(x,290,640);
-///Angulo
+if global.indexPista !=5 x = clamp(x,290,640);
+
+//Angulo
 if xDireccion != 0 && !(x <= 290 || x >= 640)
 {
 	image_angle -= xDireccion*5;

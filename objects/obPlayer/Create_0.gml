@@ -1,4 +1,6 @@
 /// @description Declarando las variables utilizadas en el carro (Player)
+image_index = 7;
+
 
 velocidad = 33.75;
 xDireccion = 0;
@@ -10,6 +12,7 @@ puedeMoverse = false;
 colision = false;
 iniciarJuego = true;
 volando = false;
+SplashSound = false;
 
 yInicial = 750;
 x = 452;
@@ -79,11 +82,14 @@ systemRastro = part_system_create();
 part_system_automatic_draw(systemRastro,false);
 
 partRastro = part_type_create();
-part_type_sprite(partRastro,sprite_index,false,false,false);
+part_type_sprite(partRastro,sprite_index,true,false,false);
 part_type_blend(partRastro,true);
+part_type_size(partRastro,1,1,0,0);
 part_type_alpha2(partRastro,.5,0);
 part_type_life(partRastro,10,10);
 part_type_speed(partRastro,20,40,5,false);
 part_type_direction(partRastro,270,270,false,false);
 
 emiteRastro = part_emitter_create(systemRastro)
+
+

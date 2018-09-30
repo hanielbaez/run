@@ -82,7 +82,6 @@ else
 {
 	gameOver = false;
 }
-
 switch(global.distancia)
 {
 	case 20:
