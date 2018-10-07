@@ -1,5 +1,4 @@
 //Musica de fondo
-//if !audio_is_playing(sndHappy) && !gameOver audio_play_sound(sndHappy,1,0);
 
 //Teclas virtuales en la room principal
 if room == roomPrincipal
@@ -9,7 +8,7 @@ if room == roomPrincipal
 		/// @description Boton Play
 		if !instance_exists(obTransicion)
 		{
-			//audio_play_sound(sndIniciar,1,false);//Sonido de encendido
+			if music == 1 audio_play_sound(sndHappy,1,1);
 			var transicionTemporal
 			transicionTemporal = instance_create_depth(0,0,-999,obTransicion);
 			transicionTemporal.irA = room0;

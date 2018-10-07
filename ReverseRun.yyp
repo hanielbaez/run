@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "32ebe22c-83f6-436a-adc3-df5625140228",
+            "Value": {
+                "id": "4635b559-5f13-4ce9-aace-78f7dd91396c",
+                "resourcePath": "objects\\obLevelUp\\obLevelUp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "33808b0c-1029-487d-be1b-1e3a2462fe74",
             "Value": {
                 "id": "3b5c8f9e-4891-42a6-97df-0fdb64cc23df",

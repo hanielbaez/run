@@ -25,6 +25,8 @@ partMonedaSystem = part_system_create();
 partMonedas = part_type_create();
 part_type_sprite(partMonedas, spMasPuntuacion, false, true, false);
 part_type_size(partMonedas,.1,.5,.2,false);
+part_type_direction(partMonedas,90,90,false,false);
+part_type_speed(partMonedas,10,10,1,false)
 part_type_life(partMonedas,10,10);
 part_type_blend(partMonedas,true);
 

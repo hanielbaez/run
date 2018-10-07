@@ -24,7 +24,7 @@ if (!colision)
 	}
 	
 	//Rastro de velocidad
-	if !instance_exists(obAmbulancia)
+	if !instance_exists(obAmbulancia) && room == room0
 	{
 		part_emitter_region(systemRastro,emiteRastro,x,x,y,y,ps_shape_rectangle,ps_distr_gaussian)
 		part_emitter_stream(systemRastro,emiteRastro,partRastro,1);
@@ -60,7 +60,10 @@ else
 
 ///Aplicar movimiento en el eje X
 x = xDireccion*20 + x;
-if global.indexPista !=5 x = clamp(x,290,640);
+if instance_exists(obPista)
+{
+	if obPista.image_index !=5 x = clamp(x,290,640);
+}
 
 //Angulo
 if xDireccion != 0 && !(x <= 290 || x >= 640)

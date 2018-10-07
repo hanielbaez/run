@@ -50,7 +50,7 @@ part_type_scale(particula_frase,2,2);
 part_type_direction(particula_frase,0,360,false,false);
 part_type_gravity(particula_frase,5,270)
 part_type_speed(particula_frase,20,20,false,false);
-part_type_alpha2(particula_frase,1,0);
+part_type_alpha2(particula_frase,1,.5);
 part_type_life(particula_frase,30,50);
 
 emisor_frase = part_emitter_create(sistema_frases);//Emisor

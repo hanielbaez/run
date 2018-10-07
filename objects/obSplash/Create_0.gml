@@ -1,5 +1,6 @@
 /// @description Water Splash
 image_alpha = 0;
+splash = false;
 
 systemSplash = part_system_create();
 
