@@ -12,7 +12,7 @@ else
 if place_meeting(x,y,obPlayer) && !obPlayer.volando
 {
 	obGUI.puntuacion+=10;
-	effect_create_above(ef_firework,160,150,5,c_blue);
+	//effect_create_above(ef_firework,160,150,5,c_blue);
 	saving();
 	if (obControl.combo != 15 && !obPlayer.volando) obControl.combo++;
 	with(obPlayer)

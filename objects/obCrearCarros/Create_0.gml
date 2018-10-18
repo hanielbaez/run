@@ -4,6 +4,6 @@ global.powerState = true;
 
 if room = room0 
 {
-	alarm[0] = room_speed*10;
-	alarm[1] = room_speed*35;
+	alarm[0] = room_speed*5;
+	alarm[1] = room_speed*5;
 }

@@ -6,7 +6,7 @@ image_angle = obPlayer.image_angle
 
 with(obNormalCar)
 {
-	if distance_to_object(obAmbulancia) < 300
+	if distance_to_object(obAmbulancia) < 350
 	{
 		var dirx = sign(x - obAmbulancia.x)
 		

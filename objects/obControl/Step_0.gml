@@ -15,7 +15,25 @@ if room == roomPrincipal
 		}
 	}
 	
-	if keyboard_check_released(ord("M"))
+	//if keyboard_check_released(ord("S")) & instance_exists(Obj_Share_Sprite)
+	//{
+	//	with(Obj_Share_Sprite)
+	//	{
+			
+	//		if (alarm[0]==-1)
+	//		if (Share_checkPermission())
+	//		{
+	//			alarm[0]=room_speed/2
+	//		}
+	//		else
+	//		{
+	//			Share_getPermission()
+	//		}
+			
+	//	}
+	//}
+	
+	if keyboard_check_released(ord("M")) //Music
 	{
 		music = music * -1;
 		if music == -1 
@@ -24,12 +42,12 @@ if room == roomPrincipal
 		}
 		else
 		{
-			if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,1);
+			//if !audio_is_playing(sndHappy) audio_play_sound(sndHappy,1,1);
 		}	
 	
 	}
 	
-	if keyboard_check_released(ord("L"))
+	if keyboard_check_released(ord("L")) //LeaderBoard
 	{
 		achievement_show_leaderboards()
 	}
@@ -40,9 +58,9 @@ if room == roomPrincipal
 if room == room0
 {
 	//Ir a room Principal
-	if keyboard_check(ord("H"))
+	if keyboard_check(ord("H")) 
 	{
-		/// @description Boton HOME
+		/// Boton HOME
 		if !instance_exists(obTransicion)
 		{
 			Load();
@@ -61,7 +79,7 @@ if room == room0
 	//Reiniciar juego
 	if keyboard_check_released(ord("R")) 
 	{
-		/// @description Boton Try Again
+		//Boton Try Again
 		obControl.gameOver = false;
 		obGUI.puntuacion = 0;
 		obGUI.monedas = 0;

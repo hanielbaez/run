@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "045431b6-de0b-4205-b3b5-9feffa52749a",
+            "Value": {
+                "id": "c2d6078e-7611-4afd-9436-b9648b4b5047",
+                "resourcePath": "objects\\obLvlBar\\obLvlBar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "06536bec-cf4f-4d53-b6fc-d0a6c47efe03",
             "Value": {
                 "id": "83f86b85-c6a5-4420-829f-43bc6ecc22ed",
@@ -583,6 +591,14 @@
             }
         },
         {
+            "Key": "4d408042-ba69-49e7-8d35-d5fb3fb05be7",
+            "Value": {
+                "id": "6cf7848e-8a9b-4476-a8ca-c6d649506870",
+                "resourcePath": "sprites\\spFrases\\spFrases.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4d8f425a-511b-4091-8264-56614311d722",
             "Value": {
                 "id": "df29e75b-d169-4440-813e-4e4fee58363e",
@@ -796,6 +812,14 @@
                 "id": "f5b699b2-2e10-4dc9-8646-31531358b073",
                 "resourcePath": "sounds\\sndYuoFailedTwo\\sndYuoFailedTwo.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "7330f54d-6098-4ed1-9ccf-ef0ea0a4462b",
+            "Value": {
+                "id": "297a2ba9-7899-48de-a9a8-915ad5043e27",
+                "resourcePath": "objects\\obSwipeControl\\obSwipeControl.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1052,14 +1076,6 @@
                 "id": "883e3025-ecf6-41e8-9b88-442db05caafa",
                 "resourcePath": "objects\\obGUI\\obGUI.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "a1b400fa-cc57-4829-b848-68803417a42c",
-            "Value": {
-                "id": "ba2d459d-4884-442a-a3f0-d76c2b784483",
-                "resourcePath": "rooms\\roomLv\\roomLv.yy",
-                "resourceType": "GMRoom"
             }
         },
         {

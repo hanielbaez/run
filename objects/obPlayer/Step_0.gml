@@ -20,7 +20,7 @@ if (!colision)
 	//Controles Derecha y izquierda (INVERTIDOS)
 	if puedeMoverse 
 	{		
-		xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
+		//xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
 	}
 	
 	//Rastro de velocidad
@@ -59,16 +59,16 @@ else
 }
 
 ///Aplicar movimiento en el eje X
-x = xDireccion*20 + x;
+x = xDireccion*40 + x;
 if instance_exists(obPista)
 {
-	if obPista.image_index !=5 x = clamp(x,290,640);
+	if obPista.image_index !=5 x = clamp(x,350,600);
 }
 
 //Angulo
-if xDireccion != 0 && !(x <= 290 || x >= 640)
+if xDireccion != 0 && !(x <= 350 || x >= 600)
 {
-	image_angle -= xDireccion*5;
+	image_angle -= xDireccion*15;
 	image_angle = clamp(image_angle,-35,35);
 	
 	//Derrape

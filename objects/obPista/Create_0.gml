@@ -2,6 +2,6 @@
 image_speed = 0;
 image_index = global.indexPista;
 oneTime = true; //Make just one road
-obGUI.puntuacion++;
+obGUI.puntuacion+=lvl;
 global.distancia++;
 saving();

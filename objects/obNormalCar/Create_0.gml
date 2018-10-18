@@ -1,9 +1,9 @@
 ///Inicializando variables
-velocidad = 20.5;
+velocidad = 40.5;
 life = 3;
 
 //Crear obMasPuntos
-if room = room0 instance_create_depth(x,y-(sprite_height/1.5),obNormalCar.depth,obMasPunto);
+if room = room0 instance_create_depth(x,y+(sprite_height/1.8),obNormalCar.depth,obMasPunto);
 
 //SPRITE aleaorio
 randomize();
@@ -23,7 +23,7 @@ if (room == room0)
 	moneda_aleatoria = irandom(10);
 	if obPlayer.volando moneda_aleatoria = 1;
 	
-	if moneda_aleatoria <= 3
+	if moneda_aleatoria <= 7
 	{
 			var yAleatorio = y+sprite_height;
 			var xAleatorio = irandom_range(300,630);

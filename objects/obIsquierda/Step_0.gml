@@ -10,8 +10,8 @@
 //}
 
 //Eliminar virtual key
-if obControl.gameOver 
-{
-	virtual_key_delete(v_izquierda);
-	image_alpha = 0;
-}
+//if obControl.gameOver 
+//{
+//	virtual_key_delete(v_izquierda);
+//	image_alpha = 0;
+//}

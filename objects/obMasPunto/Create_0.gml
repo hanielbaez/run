@@ -1,9 +1,3 @@
-/// @description Declare variable
-if instance_exists(obNormalCar) 
-{
-	velocidad = obNormalCar.velocidad;
-}
-else
-{
-	velocidad = 12.6
-}
+/// @description Insert description here
+// You can write your code in this editor
+//image_angle = 90;
