@@ -1,5 +1,5 @@
 ///Inicializando variables
-velocidad = 40.5;
+velocidad = 50.5;
 life = 3;
 
 //Crear obMasPuntos
@@ -23,7 +23,7 @@ if (room == room0)
 	moneda_aleatoria = irandom(10);
 	if obPlayer.volando moneda_aleatoria = 1;
 	
-	if moneda_aleatoria <= 7
+	if moneda_aleatoria <= 4
 	{
 			var yAleatorio = y+sprite_height;
 			var xAleatorio = irandom_range(300,630);

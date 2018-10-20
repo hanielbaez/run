@@ -4,8 +4,9 @@ globalvar lvl;
 lvl = 1;
 
 globalvar xp;
-xp = obGUI.monedasTotal;
+xp = 0;
 
 globalvar maxXP;
 maxXP = (30 + (100*lvl) - 20);
 
+Load();

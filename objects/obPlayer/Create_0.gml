@@ -53,6 +53,23 @@ part_type_life(particula_frase,30,50);
 emisor_frase = part_emitter_create(sistema_frases);//Emisor
 
 
+///New LVL effect
+particula_lvl = part_type_create()
+part_type_sprite(particula_lvl,spNewLVL,false,false,false);
+//part_type_scale(particula_lvl,1,1);
+part_type_size(particula_lvl,.05,.1,false,true)
+part_type_direction(particula_lvl,50,130,false,false);
+//part_type_gravity(particula_lvl,20,270)
+part_type_speed(particula_lvl,10,20,false,false);
+part_type_alpha2(particula_lvl,1,.5);
+part_type_life(particula_lvl,15,25);
+part_type_blend(particula_lvl,true);
+
+emisor_lvl = part_emitter_create(sistema_frases);
+
+
+
+
 //Create Particle System
 systemConfety = part_system_create();
 // Create Confetti Particle Type
