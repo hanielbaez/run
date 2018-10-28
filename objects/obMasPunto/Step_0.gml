@@ -1,7 +1,7 @@
 /// @description Delete-Velocity
 if instance_exists(obNormalCar)
 {
-	y += obNormalCar.velocidad;
+	y += 30;
 }
 else
 {
@@ -35,15 +35,15 @@ if y >= room_height && !obPlayer.volando
 		obControl.combo -=1;
 		break;
 	case 2:
-		obControl.combo -=2;
+		obControl.combo -=1;
 		break;
 	case 3:
-		obControl.combo -=3;
+		obControl.combo -=1;
 		break;
 	case 4:
-		obControl.combo -=4;
+		obControl.combo -=2;
 		break;
-	default: obControl.combo -=5;
+	default: obControl.combo -=3;
 	}
 	instance_destroy();
 }

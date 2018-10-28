@@ -12,7 +12,8 @@ volando = false;
 SplashSound = false;
 
 yInicial = 750;
-x = 452;
+randomize();
+x = 460;
 y = room_height;
 
 ////PARTICULAS DERRAPE
@@ -45,8 +46,8 @@ particula_frase = part_type_create();//Particula
 part_type_sprite(particula_frase,spLikeMano,false,false,false);
 part_type_scale(particula_frase,2,2);
 part_type_direction(particula_frase,0,360,false,false);
-part_type_gravity(particula_frase,20,270)
-part_type_speed(particula_frase,20,20,false,false);
+part_type_gravity(particula_frase,10,270)
+part_type_speed(particula_frase,10,10,false,false);
 part_type_alpha2(particula_frase,1,.5);
 part_type_life(particula_frase,30,50);
 

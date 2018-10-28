@@ -1,9 +1,9 @@
 ///Inicializando variables
-velocidad = 50.5;
+velocidad = 800;
 life = 3;
 
 //Crear obMasPuntos
-if room = room0 instance_create_depth(x,y+(sprite_height/1.8),obNormalCar.depth,obMasPunto);
+if room = room0 instance_create_depth(x,y-(sprite_height/1.8),obNormalCar.depth,obMasPunto);
 
 //SPRITE aleaorio
 randomize();

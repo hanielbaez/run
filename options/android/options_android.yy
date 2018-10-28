@@ -3,7 +3,7 @@
     "modelName": "GMAndroidOptions",
     "mvc": "1.0",
     "name": "Android",
-    "option_android_arch_arm64": false,
+    "option_android_arch_arm64": true,
     "option_android_arch_armv5": true,
     "option_android_arch_armv7": true,
     "option_android_arch_mips": false,
@@ -63,7 +63,7 @@
     "option_android_tv_isgame": true,
     "option_android_use_facebook": false,
     "option_android_version": {
-        "build": 0,
+        "build": 2,
         "major": 1,
         "minor": 0,
         "revision": 0

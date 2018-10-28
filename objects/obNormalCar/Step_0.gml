@@ -6,7 +6,7 @@ if obControl.gameOver
 }
 else
 {
-	y += velocidad;
+	y += 30;
 }
 //if room = room0 and !obControl.gameOver velocidad += 0.05;
 //if !obControl.gameOver velocidad += 0.05;

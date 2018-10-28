@@ -115,13 +115,13 @@ switch(global.distancia)
 		global.indexPista = 4;
 		global.dayState = 0; //day
 		break;
-	case 320:
+	case 200:
 		global.indexPista = 5;
 		break;
-	case 500:
+	case 300:
 		global.indexPista = 6;
 		break;
-	case 800:
+	case 500:
 		global.indexPista = 7;
 		break;
 }

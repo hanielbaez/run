@@ -7,5 +7,14 @@ if instance_exists(obTorretaMagneto)
 }
 else
 {
-	instance_destroy();
+	if room == room0
+	{
+		instance_destroy();
+	}
+	else
+	{
+		x = obSwipe.x;
+		y = obSwipe.y-50;
+	}
+	
 }

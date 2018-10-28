@@ -13,7 +13,7 @@ if obControl.gameOver && soloUnaVez
 	}
 
 	instance_create_depth(600,96,-999,obHome); //Boton ir a Home
-	instance_create_depth(global.room_halfx-200,860,-999,obShare) //Boton compartir
+	instance_create_depth(global.room_halfx-100,800,-999,obShare) //Boton compartir
 	instance_create_depth(global.room_halfx+25,860,-999,obVerVideo) //Boton video
 	alarm[2] = room_speed*2; //Boton Try Again
 

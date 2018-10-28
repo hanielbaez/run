@@ -18,9 +18,9 @@ if  iniciarJuego
 if (!colision)
 {
 	//Controles Derecha y izquierda (INVERTIDOS)
-	if puedeMoverse 
+	if puedeMoverse && room == room0
 	{		
-		//xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
+		xDireccion = keyboard_check(vk_left) - keyboard_check(vk_right);
 	}
 	
 	//Rastro de velocidad
@@ -59,14 +59,14 @@ else
 }
 
 ///Aplicar movimiento en el eje X
-x = xDireccion*40 + x;
+x = xDireccion*20 + x;
 if instance_exists(obPista)
 {
-	if obPista.image_index !=5 x = clamp(x,350,600);
+	if obPista.image_index !=5 x = clamp(x,300,635);
 }
 
 //Angulo
-if xDireccion != 0 && !(x <= 350 || x >= 600)
+if xDireccion != 0 && !(x <= 300 || x >= 635)
 {
 	image_angle -= xDireccion*15;
 	image_angle = clamp(image_angle,-35,35);
@@ -74,8 +74,8 @@ if xDireccion != 0 && !(x <= 350 || x >= 600)
 	//Derrape
 	if abs(image_angle) > 30 && !volando
 	if abs(image_angle) > 25 
-	{
-		if !audio_is_playing(sndDerrape) && !obControl.gameOver && obControl.music == 1 audio_play_sound(sndDerrape,2,false); //Sonido de derrape
+	{ 
+		if !audio_is_playing(sndDerrape) && !obControl.gameOver && obControl.music == 1 && room == room0 audio_play_sound(sndDerrape,2,false); //Sonido de derrape
 		
 		part_emitter_region(sistema_derrape,emisor_derrape,x-10,x+10,y-10,y+10,ps_shape_rectangle,ps_distr_gaussian)
 		part_emitter_burst(sistema_derrape,emisor_derrape,particula_derrape,10);

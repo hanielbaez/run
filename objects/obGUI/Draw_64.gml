@@ -19,7 +19,7 @@ if !obControl.gameOver && room == room0
 	//draw_text_transformed_color(100,150,puntuacion,.7,.7,image_angle,c_black,c_black,c_black,c_black,.5); //Sombra Puntuacion
 	//draw_text_transformed_color(110,160,puntuacion,.7,.7,image_angle,c_white,c_white,c_white,c_white,1); //Puntuacion
 	
-	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,puntuacion,2,2,image_angle,c_white,c_white,c_white,c_white,.5);	//Puntuacion
+	draw_text_transformed_color(global.room_halfx-100,global.room_halfy-300,puntuacion,2.5,2.5,image_angle,c_white,c_white,c_white,c_white,.7);	//Puntuacion
 
 }
 
