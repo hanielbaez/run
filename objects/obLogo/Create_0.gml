@@ -6,5 +6,5 @@ amplitude = 15; //pixels of peak oscillation
 //clone the y-position (or use x instead if you're doing horizontal oscillation)
 yy = y;
 
-vk_iniciar = virtual_key_add(165,650,400,400,vk_enter);
+vk_iniciar = virtual_key_add(20,750,650,350,vk_enter);
 //virtual_key_show(vk_iniciar)

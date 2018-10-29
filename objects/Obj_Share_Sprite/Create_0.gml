@@ -1,5 +1,5 @@
 if(os_type==os_android)
-path=Android_getExternalPath()+"/yourGameFolder/SharedSprite.png"//auxiliar path 
+path=Android_getExternalPath()+"/ReverseRun/share"//auxiliar path 
 if(os_type==os_ios)
 path=IOS_getPath()+"/SharedSprite.png"//auxiliar path 
 
