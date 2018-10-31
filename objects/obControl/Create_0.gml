@@ -11,5 +11,11 @@ global.distancia = 0;
 global.dayState = 0; // 0 == day, 1 == night
 global.coinF = 1;
 
+//Google Play Services
+if !achievement_login_status()
+   {
+		achievement_login();
+   }
 
+//Game Analytic
 ga_initialize("aef341a05d2fc9d5760d89305e4f27f9", "4fe5c3d00303da2cae4fd75a6b696e3be222b79d"); //GameAnalityc

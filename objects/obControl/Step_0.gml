@@ -47,9 +47,9 @@ if room == roomPrincipal
 	
 	}
 	
-	if keyboard_check_released(ord("L")) //LeaderBoard
+	if keyboard_check(ord("L")) //LeaderBoard
 	{
-		achievement_show_leaderboards()
+		if achievement_available() achievement_show_leaderboards()
 	}
 	
 }
