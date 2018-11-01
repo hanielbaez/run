@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(oneTime)
+if(saveScreen)
 {
-	oneTime=false
-	screen_save(path)
+	saveScreen=false
+	screen_save(localPath)
 }
 

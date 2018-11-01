@@ -1,20 +1,46 @@
 
-if(os_type==os_android)
+var additionPath="/KaguvaFolder"+"/Screen.png"
+
+switch(os_type)
 {
-	if (Share_checkPermission())
-		ShareAndroid_Image("YourGameName",path)
-	else
-	{
-		Share_getPermission()
-
-	}
+	
+	case os_android:
+		
+		if(Share_checkPermission())
+		{
+			
+			path=Android_getExternalPath()+additionPath
+			
+			if(file_exists(path))
+				file_delete(path)
+					
+			sprite_save(Sprite,0,path)
+		
+			Sharing=true
+		}
+		else
+		{
+			Share_getPermission()
+		}
+	break
+	
+	case os_ios:
+	
+		path=IOS_getPath()+additionPath
+		
+		if(file_exists(path))
+			file_delete(path)
+		
+		sprite_save(Sprite,0,path)
+		
+		Sharing=true
+		
+	break
+	
+	default:
+		path=""
+	break
+	
 }
-if(os_type==os_ios)
-ShareIOS_Image(path)
 
-//What is this?, you added this too?
-//		instance_create(xstart,ystart,object_index)//????
-//		instance_destroy()//???
-/* */
-/*  */
-//i do no remember adding anything, also i re install all again
+

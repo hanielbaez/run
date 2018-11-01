@@ -1,10 +1,11 @@
 if(os_type==os_android)
-path=Android_getExternalPath()+"/ReverseRun/share"//auxiliar path 
-if(os_type==os_ios)
-path=IOS_getPath()+"/SharedSprite.png"//auxiliar path 
+	path=Android_getExternalPath()+"/yourGameFolder/SharedSprite.png"//auxiliar path 
 
-show_debug_message("Kaguva------>PATH")
-show_debug_message(path)
+if(os_type==os_ios)
+	path=IOS_getPath()+"/SharedSprite.png"//auxiliar path 
+
+//show_debug_message("Kaguva------>PATH")
+//show_debug_message(path)
 
 surf = surface_create(sprite_get_width(sprite_index),sprite_get_height(sprite_index));//surface size
     surface_set_target(surf);

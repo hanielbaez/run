@@ -15,21 +15,11 @@ if room == roomPrincipal
 		}
 	}
 	
-	//if keyboard_check_released(ord("S")) & instance_exists(Obj_Share_Sprite)
+	//if keyboard_check_released(ord("S")) 
 	//{
-	//	with(Obj_Share_Sprite)
+	//	with(obShare)
 	//	{
-			
-	//		if (alarm[0]==-1)
-	//		if (Share_checkPermission())
-	//		{
-	//			alarm[0]=room_speed/2
-	//		}
-	//		else
-	//		{
-	//			Share_getPermission()
-	//		}
-			
+	//		instance_create_depth(x,y,depth,Obj_SharePictureImage_Parent);
 	//	}
 	//}
 	
@@ -47,10 +37,10 @@ if room == roomPrincipal
 	
 	}
 	
-	if keyboard_check(ord("L")) //LeaderBoard
-	{
-		if achievement_available() achievement_show_leaderboards()
-	}
+	//if keyboard_check(ord("L")) //LeaderBoard
+	//{
+	//	achievement_show_leaderboards()
+	//}
 	
 }
 	

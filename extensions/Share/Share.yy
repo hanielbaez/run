@@ -30,7 +30,7 @@
     "androidsourcedir": "",
     "author": "",
     "classname": "Share",
-    "copyToTargets": 35184372089006,
+    "copyToTargets": 12,
     "date": "2017-56-31 02:08:08",
     "description": "",
     "extensionName": "",
@@ -175,7 +175,14 @@
             "init": "",
             "kind": 4,
             "order": [
-                
+                "61009c43-3e6c-4e11-a2a6-729762cad09e",
+                "8059ed91-d7ca-406f-a9b5-a611d555a332",
+                "a1df092c-e992-4851-bd75-a5a321cf02e6",
+                "25ef5b65-ed21-453c-8da8-7de8b133c813",
+                "a126943d-fb42-4943-be2f-53562cee238b",
+                "338578a7-f592-41bb-945a-13e8bdb52783",
+                "9c6ce16d-e646-41de-a194-467e4a3a34a2",
+                "3d97ea15-8a3e-45a2-9988-d53405b8dc7b"
             ],
             "origname": "extensions\\Share.ext",
             "uncompress": false
