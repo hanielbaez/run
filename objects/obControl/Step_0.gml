@@ -108,10 +108,10 @@ switch(global.distancia)
 	case 200:
 		global.indexPista = 5;
 		break;
-	case 300:
+	case 250:
 		global.indexPista = 6;
 		break;
-	case 500:
+	case 300:
 		global.indexPista = 7;
 		break;
 }

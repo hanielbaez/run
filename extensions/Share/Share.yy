@@ -188,7 +188,7 @@
             "uncompress": false
         }
     ],
-    "gradleinject": "dependencies {\\u000d\\u000a    compile 'com.android.support:appcompat-v7:24.1.1'\\u000d\\u000a}\\u000d\\u000a\\u000d\\u000aandroid {\\u000d\\u000a    lintOptions {\\u000d\\u000a        abortOnError false\\u000d\\u000a    }\\u000d\\u000a}",
+    "gradleinject": "dependencies {\\u000a\\u000d    compile 'com.android.support:appcompat-v7:24.1.1'\\u000a\\u000d}\\u000a\\u000d\\u000a\\u000dandroid {\\u000a\\u000d    lintOptions {\\u000a\\u000d        abortOnError false\\u000a\\u000d    }\\u000a\\u000d}",
     "helpfile": "",
     "installdir": "",
     "iosProps": true,

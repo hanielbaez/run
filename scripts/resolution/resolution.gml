@@ -14,7 +14,7 @@ var baseHeight = 1280;
 var aspect = baseWidth/baseHeight;
 
 //Work out the adjusted height and width
-if (displayWidth <= displayHeight) //< if for mobile
+if (displayWidth >= displayHeight) //< if for mobile
 {
 	var height = min(baseHeight, displayHeight);
 	var width = height * aspect;

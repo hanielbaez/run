@@ -5,16 +5,6 @@
     "name": "obPuntuacion",
     "eventList": [
         {
-            "id": "70347537-7580-4f9a-8144-26ef5223918b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "19fba7b0-1864-4fd0-a5d8-a2c13b864b9e"
-        },
-        {
             "id": "210b53be-2640-41ff-a7d2-494241b39c14",
             "modelName": "GMEvent",
             "mvc": "1.0",

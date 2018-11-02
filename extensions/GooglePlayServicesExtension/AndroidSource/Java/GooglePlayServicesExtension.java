@@ -22,15 +22,20 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
-
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+
+import com.google.ads.consent.*;
+import java.net.URL;
+import java.net.MalformedURLException;
+import java.util.List;
+
+import android.content.SharedPreferences;
+import com.google.gson.Gson;
+import android.text.TextUtils;
+import android.content.Context;
 
 import android.os.Build;
 import ${YYAndroidPackageName}.R;
@@ -46,7 +51,6 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
-
 
 import android.annotation.TargetApi;
 import com.google.android.gms.*;
@@ -139,6 +143,8 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 	private int BannerXPos;
 	private int BannerYPos;
 	
+	private boolean mConsentPreferAdFree = false;
+	
 	// Request result event IDs
 	private static final int GoogleMobileAds_ASyncEvent = 9817;
 	private static final int GooglePlayServices_PostScoreResultEvent = 9818;
@@ -169,183 +175,20 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 
 		// Initialise sign in client
 		GoogleSignInOptions.Builder optionsBuilder = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN);
-		optionsBuilder.requestScopes(Games.SCOPE_GAMES, Plus.SCOPE_PLUS_LOGIN);
-		optionsBuilder.requestProfile();
-		
+		optionsBuilder.requestScopes(Games.SCOPE_GAMES);
+
 		// Update scopes for cloud saving
-		RunnerActivity.CurrentActivity.mYYPrefs.getBoolean("Debug");
 		mCloudServicesEnabled = RunnerActivity.CurrentActivity.mYYPrefs.getBoolean("YYGoogleCloudSavingEnabled");
 		if(mCloudServicesEnabled)
 		{
-			optionsBuilder.requestScopes(Drive.SCOPE_APPFOLDER);
+			optionsBuilder.requestScopes(Drive.SCOPE_APPFOLDER, Plus.SCOPE_PLUS_LOGIN);
+			optionsBuilder.requestProfile();
 		}
 		
 		// Create Google client
 		Log.i("yoyo", "Signing into google game services. Cloud enabled: " + mCloudServicesEnabled + ". Options builder: " + optionsBuilder);
 		mGoogleSigninClient = GoogleSignIn.getClient(RunnerJNILib.ms_context, optionsBuilder.build());
 	}
-	
-    public void GoogleMobileAds_LoadRewardedVideo(String _unitid)
-    {
-        final String unitid = _unitid;
-        
-        if(mRewardedVideoAd==null)
-        {
-          
-        }
-        RunnerActivity.ViewHandler.post( new Runnable() {
-    		public void run() 
-    		{
-                 
-                if(mRewardedVideoAd==null)
-                {
-                  mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(RunnerActivity.CurrentActivity);
-                  mRewardedVideoAd.setRewardedVideoAdListener(CurrentGoogleExtension);
-                }
-                
-                AdRequest.Builder builder = new AdRequest.Builder();
-                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
-                if( bUseTestAds)
-                    builder.addTestDevice(TestDeviceId);
-                AdRequest adRequest = builder.build();
-                 mRewardedVideoAd.loadAd(unitid,adRequest);
-            }
-        });
-    }
-    
-    public void GoogleMobileAds_ShowRewardedVideo()
-    {
-        if(mRewardedVideoAd!=null)
-        {
-            RunnerActivity.ViewHandler.post( new Runnable() {
-                public void run() 
-                {
-                   if (mRewardedVideoAd.isLoaded()) 
-                   {
-                        mRewardedVideoAd.show();
-                   } 
-                }
-            });
-        }
-    }
-    
-    public String GoogleMobileAds_RewardedVideoStatus()
-    {
-        
-        if(mRewardedVideoAd!=null)
-		{
-			RunnerActivity.ViewHandler.post( new Runnable() {
-    		public void run() 
-    		{
-                if(mRewardedVideoAd!=null)
-                {
-                    if(mRewardedVideoAd.isLoaded())
-                        RewardedVideoStatus="Ready";
-                    else
-                        RewardedVideoStatus = "Not Ready";
-                }
-			}});
-		}
-
-		return RewardedVideoStatus;
-    }
-   
-    @Override
-    public void onRewarded(RewardItem reward) {
-        Toast.makeText(RunnerActivity.CurrentActivity, "onRewarded! currency: " + reward.getType() + "  amount: " +
-                reward.getAmount(), Toast.LENGTH_SHORT).show();
-                
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_watched" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-        RunnerJNILib.DsMapAddDouble( dsMapIndex,"amount",reward.getAmount());
-        RunnerJNILib.DsMapAddString( dsMapIndex, "currency", reward.getType() );
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-                
-        // Reward the user.
-    }
-
-    @Override
-    public void onRewardedVideoAdLeftApplication() {
-        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdLeftApplication",
-          //      Toast.LENGTH_SHORT).show();
-                
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_leftapplication" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-    }
-
-    @Override
-    public void onRewardedVideoAdClosed() {
-        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adclosed" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-    }
-
-    @Override
-    public void onRewardedVideoAdFailedToLoad(int errorCode) {
-        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_loadfailed" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-        RunnerJNILib.DsMapAddDouble( dsMapIndex,"errorcode",errorCode);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-        
-        RunnerActivity.ViewHandler.post( new Runnable() {
-    		public void run() 
-    		{
-                if(mRewardedVideoAd!=null)
-                {
-                    if(mRewardedVideoAd.isLoaded())
-                        RewardedVideoStatus="Ready";
-                    else
-                        RewardedVideoStatus = "Not Ready";
-                }
-			}});
-        
-    }
-
-    @Override
-    public void onRewardedVideoAdLoaded() {
-        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adloaded" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-        
-        RunnerActivity.ViewHandler.post( new Runnable() {
-    		public void run() 
-    		{
-                if(mRewardedVideoAd!=null)
-                {
-                    if(mRewardedVideoAd.isLoaded())
-                        RewardedVideoStatus="Ready";
-                    else
-                        RewardedVideoStatus = "Not Ready";
-                }
-			}});
-    }
-
-    @Override
-    public void onRewardedVideoAdOpened() {
-     //   Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adopened" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-    }
-
-    @Override
-    public void onRewardedVideoStarted() {
-        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
-        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
-		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_videostarted" );
-		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
-		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
-    }   
 	
 	@Override
 	public void Init()
@@ -468,7 +311,7 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 					}
 					else
 					{
-						Log.i("yoyo", "Login failed! Result: " + intent);
+						Log.i("yoyo", "Login failed! Exception: " + task.getException());
 						onLoginFailed();
 					}
 				}
@@ -1307,6 +1150,179 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 	// ==================================================
 	// MOBILE ADS
 	// ==================================================
+	
+    public void GoogleMobileAds_LoadRewardedVideo(String _unitid)
+    {
+        final String unitid = _unitid;
+        
+        if(mRewardedVideoAd==null)
+        {
+          
+        }
+        RunnerActivity.ViewHandler.post( new Runnable() {
+    		public void run() 
+    		{
+                 
+                if(mRewardedVideoAd==null)
+                {
+                  mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(RunnerActivity.CurrentActivity);
+                  mRewardedVideoAd.setRewardedVideoAdListener(CurrentGoogleExtension);
+                }
+                
+                AdRequest.Builder builder = new AdRequest.Builder();
+                builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+				
+                if( bUseTestAds)
+                    builder.addTestDevice(TestDeviceId);
+				
+                AdRequest adRequest = GoogleMobileAds_BuildAdRequestWithConsent(builder);
+                mRewardedVideoAd.loadAd(unitid,adRequest);
+            }
+        });
+    }
+    
+    public void GoogleMobileAds_ShowRewardedVideo()
+    {
+        if(mRewardedVideoAd!=null)
+        {
+            RunnerActivity.ViewHandler.post( new Runnable() {
+                public void run() 
+                {
+                   if (mRewardedVideoAd.isLoaded()) 
+                   {
+                        mRewardedVideoAd.show();
+                   } 
+                }
+            });
+        }
+    }
+    
+    public String GoogleMobileAds_RewardedVideoStatus()
+    {
+        
+        if(mRewardedVideoAd!=null)
+		{
+			RunnerActivity.ViewHandler.post( new Runnable() {
+    		public void run() 
+    		{
+                if(mRewardedVideoAd!=null)
+                {
+                    if(mRewardedVideoAd.isLoaded())
+                        RewardedVideoStatus="Ready";
+                    else
+                        RewardedVideoStatus = "Not Ready";
+                }
+			}});
+		}
+
+		return RewardedVideoStatus;
+    }
+   
+    @Override
+    public void onRewarded(RewardItem reward) {
+        Toast.makeText(RunnerActivity.CurrentActivity, "onRewarded! currency: " + reward.getType() + "  amount: " +
+                reward.getAmount(), Toast.LENGTH_SHORT).show();
+                
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_watched" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+        RunnerJNILib.DsMapAddDouble( dsMapIndex,"amount",reward.getAmount());
+        RunnerJNILib.DsMapAddString( dsMapIndex, "currency", reward.getType() );
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+                
+        // Reward the user.
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdLeftApplication",
+          //      Toast.LENGTH_SHORT).show();
+                
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_leftapplication" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adclosed" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int errorCode) {
+        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_loadfailed" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+        RunnerJNILib.DsMapAddDouble( dsMapIndex,"errorcode",errorCode);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+        
+        RunnerActivity.ViewHandler.post( new Runnable() {
+    		public void run() 
+    		{
+                if(mRewardedVideoAd!=null)
+                {
+                    if(mRewardedVideoAd.isLoaded())
+                        RewardedVideoStatus="Ready";
+                    else
+                        RewardedVideoStatus = "Not Ready";
+                }
+			}});
+        
+    }
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adloaded" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+        
+        RunnerActivity.ViewHandler.post( new Runnable() {
+    		public void run() 
+    		{
+                if(mRewardedVideoAd!=null)
+                {
+                    if(mRewardedVideoAd.isLoaded())
+                        RewardedVideoStatus="Ready";
+                    else
+                        RewardedVideoStatus = "Not Ready";
+                }
+			}});
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+     //   Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_adopened" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+        //Toast.makeText(RunnerActivity.CurrentActivity, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+        int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		RunnerJNILib.DsMapAddString( dsMapIndex, "type", "rewardedvideo_videostarted" );
+		RunnerJNILib.DsMapAddDouble( dsMapIndex,"id",GoogleMobileAds_ASyncEvent);
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+    }   
+	
+	/*
+	@Override
+	public void onRewardedVideoCompleted()
+	{
+		
+	}
+	*/
+	
 	private AdListener adlistener = new AdListener(){
 		@Override
 		 public void onAdLoaded() {
@@ -1349,7 +1365,7 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 	public void GoogleMobileAds_Init(String _Arg1, String AppId)
 	{
 		InterstitialId = _Arg1;	
-        MobileAds.initialize(RunnerActivity.CurrentActivity,AppId);
+        MobileAds.initialize(RunnerActivity.CurrentActivity, AppId);
 	}
 	
 	public void GoogleMobileAds_ShowInterstitial()
@@ -1397,9 +1413,11 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 				
 			AdRequest.Builder builder = new AdRequest.Builder();
 			builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+			
 			if( bUseTestAds)
 				builder.addTestDevice(TestDeviceId);
-			AdRequest adRequest = builder.build();
+			
+			AdRequest adRequest = GoogleMobileAds_BuildAdRequestWithConsent(builder);
 
 			// Load the interstitial ad.
 			interstitialAd.loadAd(adRequest);
@@ -1552,9 +1570,11 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 			
 				AdRequest.Builder builder = new AdRequest.Builder();
 				builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+				
 				if( bUseTestAds)
 					builder.addTestDevice(TestDeviceId);
-				AdRequest adRequest = builder.build();
+				
+				AdRequest adRequest = GoogleMobileAds_BuildAdRequestWithConsent(builder);
 
 				// Start loading the ad in the background.
 				//adView.setVisibility(View.INVISIBLE);
@@ -1653,5 +1673,198 @@ public class GooglePlayServicesExtension extends RunnerSocial implements GoogleA
 		return InterstitialStatus;
 	}
 	
+	// ==================================================
+	// CONSENT
+	// ==================================================
 	
+	// Handles events in the default consent form
+	private class AdsConsentFormListener extends ConsentFormListener
+	{ 
+		private ConsentForm m_consentForm = null;
+		
+		public AdsConsentFormListener(ConsentForm form)
+		{
+			m_consentForm = form;
+		}
+		
+		public void setForm(ConsentForm form)
+		{
+			m_consentForm = form;
+		}
+		
+		@Override
+		public void onConsentFormLoaded() 
+		{
+			// Consent form loaded successfully.
+			Log.i("yoyo", "Consent form loaded. Consent form object: " + (m_consentForm != null ? m_consentForm.toString() : "NULL"));
+			
+			if(m_consentForm != null)
+				m_consentForm.show();
+			else
+				GoogleMobileAds_ConsentReportStatus(ConsentStatus.UNKNOWN, -1, "Error: Consent form is NULL in load finished callback.");
+		}
+
+		@Override
+		public void onConsentFormOpened() 
+		{
+			// Consent form was displayed.
+			Log.i("yoyo", "Consent form opened successfully!");
+		}
+
+		@Override
+		public void onConsentFormClosed(ConsentStatus consentStatus, Boolean userPrefersAdFree) 
+		{
+			// Consent form was closed.
+			Log.i("yoyo", "Consent form closed. Status: " + consentStatus.toString() + ". Adfree: " + userPrefersAdFree.toString());
+			GoogleMobileAds_ConsentReportStatus(consentStatus, userPrefersAdFree ? 1 : 0, null);
+		}
+
+		@Override
+		public void onConsentFormError(String errorDescription) 
+		{
+			// Consent form error.
+			Log.i("yoyo", "Consent form error: " + errorDescription);
+			GoogleMobileAds_ConsentReportStatus(ConsentStatus.UNKNOWN, -1, errorDescription);
+		}
+	};
+	
+	// Builds an AdMob ad request with consent information
+	private AdRequest GoogleMobileAds_BuildAdRequestWithConsent(AdRequest.Builder builder)
+	{
+		Bundle extras = new Bundle();
+		if(GoogleMobileAds_ConsentGetAllowPersonalizedAds() != 0)
+			extras.putString("npa", "1");
+		
+		builder.addNetworkExtrasBundle(com.google.ads.mediation.admob.AdMobAdapter.class, extras);
+		return builder.build();
+	}
+	
+	// Queries current consent state for the given ad provider
+	public void GoogleMobileAds_ConsentUpdate(final String publisherIds, final String privacyPolicy, final double personalisedAds, final double noPersonalisedAds, final double adFree)
+	{
+		ConsentInformation.getInstance(RunnerJNILib.ms_context).setDebugGeography(DebugGeography.DEBUG_GEOGRAPHY_EEA);
+		
+		ConsentInformation consentInformation = ConsentInformation.getInstance(RunnerJNILib.ms_context);
+        String[] publisherIdsArray = publisherIds.split(",");
+		
+		Log.i("yoyo", "Attempting to update consent with publisher IDs: " + publisherIds);
+		
+        consentInformation.requestConsentInfoUpdate(publisherIdsArray, new ConsentInfoUpdateListener() {
+            @Override
+            public void onConsentInfoUpdated(ConsentStatus consentStatus) 
+			{
+				// If we haven't given consent, show the form
+				if(consentStatus == ConsentStatus.UNKNOWN)
+				{
+					GoogleMobileAds_ConsentFormShow(privacyPolicy, personalisedAds, noPersonalisedAds, adFree);
+				}
+				else
+				{
+					GoogleMobileAds_ConsentReportStatus(consentStatus, -1, null);
+				}
+            }
+
+            @Override
+            public void onFailedToUpdateConsentInfo(String errorDescription) 
+			{
+				Log.i("yoyo", "Error updating consent: " + errorDescription);
+                GoogleMobileAds_ConsentReportStatus(ConsentStatus.UNKNOWN, -1, errorDescription);
+            }
+        });
+	}
+	
+	// Attempts to load & display consent form
+	public void GoogleMobileAds_ConsentFormShow(final String privacyPolicy, final double personalisedAds, final double noPersonalisedAds, final double adFree)
+	{
+		Log.i("yoyo", "Attempting to show consent form.");
+		
+		URL privacyPolicyURL = null;
+		try {
+			// TODO: Replace with your app's privacy policy URL.
+			privacyPolicyURL = new URL(privacyPolicy);
+		} 
+		catch (MalformedURLException e) {
+			Log.i("yoyo", "Invalid privacy policy URL passed to consent form!");
+			e.printStackTrace();
+		}
+		
+		// Configure the form
+		AdsConsentFormListener listener = new AdsConsentFormListener(null);
+		ConsentForm.Builder formBuilder = new ConsentForm.Builder(RunnerJNILib.ms_context, privacyPolicyURL).withListener(listener);
+		
+		if(personalisedAds != 0)
+			formBuilder = formBuilder.withPersonalizedAdsOption();
+		
+		if(noPersonalisedAds != 0)
+			formBuilder = formBuilder.withNonPersonalizedAdsOption();
+		
+		if(adFree != 0)
+			formBuilder = formBuilder.withAdFreeOption();
+		
+		// Build  and load our form
+		ConsentForm form = formBuilder.build();
+		listener.setForm(form);
+		form.load();
+		
+		Log.i("yoyo", "Consent form load triggered. Form object: " + form.toString());
+	}
+	
+	// REPORT CONSENT STATUS
+	private void GoogleMobileAds_ConsentReportStatus(ConsentStatus status, int preferAdFree, String error)
+	{
+		int dsMapIndex = RunnerJNILib.jCreateDsMap(null, null, null);
+		
+		// Return consent status or error
+		if(error == null)
+		{
+			mConsentPreferAdFree = preferAdFree != 0 ? true : false;
+			RunnerJNILib.DsMapAddString(dsMapIndex, "status", status.toString());
+			RunnerJNILib.DsMapAddDouble(dsMapIndex, "ad_free", (mConsentPreferAdFree ? 1 : 0));
+		}
+		else
+		{
+			RunnerJNILib.DsMapAddString(dsMapIndex, "error", error);
+		}
+		
+		RunnerJNILib.DsMapAddString(dsMapIndex, "type", "consent_status" );
+		RunnerJNILib.DsMapAddDouble(dsMapIndex, "id", GoogleMobileAds_ASyncEvent);
+		
+		RunnerJNILib.CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
+	}
+	
+	// CONSENT GETTERS & SETTERS
+	public void GoogleMobileAds_ConsentSetUserUnderAge(double isUnderAge)
+	{
+		ConsentInformation.getInstance(RunnerJNILib.ms_context).setTagForUnderAgeOfConsent(isUnderAge != 0 ? true : false);
+	}
+	
+	public boolean GoogleMobileAds_ConsentIsUserUnderAge()
+	{
+		return ConsentInformation.getInstance(RunnerJNILib.ms_context).isTaggedForUnderAgeOfConsent();
+	}
+	
+	public boolean GoogleMobileAds_ConsentIsUserInEEA()
+	{
+		return ConsentInformation.getInstance(RunnerJNILib.ms_context).isRequestLocationInEeaOrUnknown();
+	}
+	
+	public void GoogleMobileAds_ConsentDebugAddDevice(String id)
+	{
+		ConsentInformation.getInstance(RunnerJNILib.ms_context).addTestDevice(id);
+	}
+	
+	public void GoogleMobileAds_ConsentDebugSetDeviceInEEA(double isInEEA)
+	{
+		ConsentInformation.getInstance(RunnerJNILib.ms_context).setDebugGeography(isInEEA != 0 ? DebugGeography.DEBUG_GEOGRAPHY_EEA : DebugGeography.DEBUG_GEOGRAPHY_NOT_EEA);
+	}
+	
+	public double GoogleMobileAds_ConsentGetAllowPersonalizedAds()
+	{
+		return (ConsentInformation.getInstance(RunnerJNILib.ms_context).getConsentStatus() == ConsentStatus.PERSONALIZED ? 1 : 0);
+	}
+	
+	public void GoogleMobileAds_ConsentSetAllowPersonalizedAds(double allowPersonalized)
+	{
+		ConsentInformation.getInstance(RunnerJNILib.ms_context).setConsentStatus(allowPersonalized != 0 ? ConsentStatus.PERSONALIZED : ConsentStatus.NON_PERSONALIZED);
+	}
 }

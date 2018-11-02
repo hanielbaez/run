@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "02371e01-138b-40e5-b93f-c6c756d88ebe",
+            "Value": {
+                "id": "b2c763e6-ff1c-4ba1-8498-ab91dc32f7be",
+                "resourcePath": "extensions\\GooglePlayServicesExtension\\GooglePlayServicesExtension.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "02df23a6-1587-4677-ab4b-e329416e09b7",
             "Value": {
                 "id": "ee2c05d2-49ea-4a53-9b7f-3b5610bdf83b",
@@ -1948,14 +1956,6 @@
                 "id": "399bf1e4-5707-4ad4-87d4-14c2d65a6b74",
                 "resourcePath": "objects\\Obj_Share_Sprite\\Obj_Share_Sprite.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "f90e051e-c7b2-435d-9fad-7d7a6debb164",
-            "Value": {
-                "id": "7233d1f6-e752-464e-bf4b-2cc0696979b6",
-                "resourcePath": "extensions\\GooglePlayServicesExtension\\GooglePlayServicesExtension.yy",
-                "resourceType": "GMExtension"
             }
         },
         {

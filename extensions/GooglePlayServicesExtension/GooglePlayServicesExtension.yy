@@ -1,5 +1,5 @@
 {
-    "id": "f90e051e-c7b2-435d-9fad-7d7a6debb164",
+    "id": "02371e01-138b-40e5-b93f-c6c756d88ebe",
     "modelName": "GMExtension",
     "mvc": "1.0",
     "name": "GooglePlayServicesExtension",
@@ -7,24 +7,23 @@
         
     ],
     "androidPermissions": [
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.INTERACT_ACROSS_USERS"
+        "android.permission.ACCESS_COARSE_LOCATION"
     ],
     "androidProps": true,
     "androidactivityinject": "",
     "androidclassname": "GooglePlayServicesExtension",
-    "androidinject": "<activity android:name=\"com.google.android.gms.ads.AdActivity\" android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" \/>\\u000a\\u000d<meta-data android:value=\"true\" android:name=\"YYGoogleCloudSavingEnabled\" \/>",
+    "androidinject": "<activity android:name=\"com.google.android.gms.ads.AdActivity\" android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" \/>",
     "androidmanifestinject": "",
     "androidsourcedir": "",
     "author": "",
     "classname": "GoogleMobileAdsExt",
-    "copyToTargets": 8,
-    "date": "2018-51-24 04:04:15",
+    "copyToTargets": 35651596,
+    "date": "2018-56-23 05:10:43",
     "description": "",
     "extensionName": "",
     "files": [
         {
-            "id": "40c5e3aa-c93e-44fa-87b9-a8795e84ca86",
+            "id": "75fe2405-0723-457f-a277-507ffed11f30",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
             "ProxyFiles": [
@@ -32,7 +31,7 @@
             ],
             "constants": [
                 {
-                    "id": "45881fa4-5ecc-4efc-ae5b-aa7155b154f0",
+                    "id": "df0f69a8-d492-48f1-933f-e406b79c28dc",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_Banner",
@@ -40,7 +39,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "0cf332da-b400-40b1-99e2-e789ddeeed9d",
+                    "id": "cb3151af-46c8-4d22-9b79-638c348d9768",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_MRect",
@@ -48,7 +47,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "43a6ca51-4b78-46fb-9ad8-1114f9b56fd1",
+                    "id": "ec9aea17-9741-428d-bbc9-e722e7c1c346",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_Full_Banner",
@@ -56,7 +55,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "4d0bea4a-93d6-4633-9446-3ae5f17e97c0",
+                    "id": "079486eb-f7c1-4bc9-9342-3a4458af1f0b",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_Leaderboard",
@@ -64,7 +63,7 @@
                     "value": "4"
                 },
                 {
-                    "id": "720daf28-85c8-449d-89e5-b6c75c5d1dbc",
+                    "id": "f5e651b2-5b45-4ece-93c6-04cc5685238e",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_Skyscraper",
@@ -72,7 +71,7 @@
                     "value": "5"
                 },
                 {
-                    "id": "38a282c2-b1a6-4a09-a784-c81de17002dc",
+                    "id": "bd56c8ed-ab92-42ca-b8a4-57a8055a518c",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_ASyncEvent",
@@ -80,7 +79,7 @@
                     "value": "9817"
                 },
                 {
-                    "id": "aef81739-9c6e-4670-a0ab-a50f78cfa4ce",
+                    "id": "c2e66dee-7c3a-4008-87af-a36254372a79",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GoogleMobileAds_Smart_Banner",
@@ -93,7 +92,7 @@
             "final": "",
             "functions": [
                 {
-                    "id": "5323a377-9398-4483-beba-51337ce4114f",
+                    "id": "ac6ae7dc-ac39-4713-9865-680f78c0cd4e",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 2,
@@ -109,7 +108,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "aefbe8eb-f60a-4c0e-8462-88f6db68fd9e",
+                    "id": "61fd3a41-824d-43ad-8a96-51169ad03892",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -124,7 +123,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "fd1c9aea-89f0-4585-96b0-a7dd1a40a5d6",
+                    "id": "1141aeda-afba-4874-81b1-3423dec1ca56",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -139,7 +138,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "4747f72e-9485-4823-bdd4-160c8b5cf194",
+                    "id": "209c5db8-3917-49c1-a584-5a0c38af0f93",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -154,7 +153,7 @@
                     "returnType": 1
                 },
                 {
-                    "id": "b279d4e2-32db-4f0b-b157-97747fbfe59a",
+                    "id": "3e0805a3-8212-4606-95d8-dc5ae743226d",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 2,
@@ -170,7 +169,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "d5abdc9b-7cf9-4a8d-b587-3ae2cf67477b",
+                    "id": "3464b313-a6e8-4fcb-b107-6c1f8046e01b",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -185,7 +184,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "5e7181c9-7f44-4bce-8d0c-7a1cc12cf300",
+                    "id": "ad590ce2-e6ec-46b6-a4b9-9d776f0d9047",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 2,
@@ -201,7 +200,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "2171a08e-9f81-4510-ae2d-6a1ecab2cdea",
+                    "id": "e563b9e3-031d-4526-af68-8ff11154579b",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -216,7 +215,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "3555a064-7850-4259-8f8e-45c546622c02",
+                    "id": "fd7693bd-7087-4cf6-a2c6-a9c4b1f5ac3a",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -231,7 +230,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "f2329317-7ae9-4a03-8645-081bc5968a26",
+                    "id": "bd375b87-441f-411f-b7c3-9da06624f228",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 2,
@@ -247,7 +246,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "0d96f922-4fbc-470d-b2ca-4e4208963bd6",
+                    "id": "c3a27242-07e9-4280-b94c-57a8c89faa5b",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 4,
@@ -265,7 +264,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "560ccc1b-2f60-4952-8628-63005bc5d712",
+                    "id": "82a01a33-31cd-4876-a558-8975256e4962",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 1,
@@ -280,7 +279,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "432ba434-04a3-43ec-9b58-eefb687e7d7e",
+                    "id": "5f86dc50-0061-46fd-a471-a33fa592f86a",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -295,7 +294,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "d11c9fba-7164-4b92-94fa-85aad8efa73f",
+                    "id": "790b7b7f-1045-4c8b-892d-730d95b75583",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -310,7 +309,7 @@
                     "returnType": 1
                 },
                 {
-                    "id": "031670e2-d847-4263-8a65-5c6e460b1aae",
+                    "id": "2f4f7119-654b-4cb5-a3d2-d60b714056ed",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -325,7 +324,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "22d10034-41f2-44f1-b7b0-b3bb943e57d8",
+                    "id": "d4afac93-4ae7-445e-8b22-ca60f3c5cab0",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -338,33 +337,184 @@
                     "kind": 11,
                     "name": "GoogleMobileAds_ShowBanner",
                     "returnType": 2
+                },
+                {
+                    "id": "91b4daf8-81f5-4c1f-9e63-3bd1b6159655",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": -1,
+                    "args": [
+                        1,
+                        1,
+                        2,
+                        2,
+                        2
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentUpdate",
+                    "help": "GoogleMobileAds_ConsentUpdate(publisherIds, privacyPolicyURL, personalisedAds, noPersonalisedAds, adFree)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentUpdate",
+                    "returnType": 2
+                },
+                {
+                    "id": "4f86cd94-9c61-4275-a906-77509db7a262",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": -1,
+                    "args": [
+                        1,
+                        2,
+                        2,
+                        2
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentFormShow",
+                    "help": "GoogleMobileAds_ConsentFormShow(privacyPolicyURL, personalisedAds, noPersonalisedAds, adFree)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentFormShow",
+                    "returnType": 2
+                },
+                {
+                    "id": "8db98f25-d605-4cd8-aa9d-09f0005311f9",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        2
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentSetUserUnderAge",
+                    "help": "GoogleMobileAds_ConsentSetUserUnderAge(isUnderAge)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentSetUserUnderAge",
+                    "returnType": 2
+                },
+                {
+                    "id": "f27d6994-fe10-4484-a927-17a46dc75134",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentIsUserUnderAge",
+                    "help": "GoogleMobileAds_ConsentIsUserUnderAge()",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentIsUserUnderAge",
+                    "returnType": 2
+                },
+                {
+                    "id": "a72ae30c-6105-426a-8e1a-3d77c0e10951",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentIsUserInEEA",
+                    "help": "GoogleMobileAds_ConsentIsUserInEEA()",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentIsUserInEEA",
+                    "returnType": 2
+                },
+                {
+                    "id": "7a1fd359-7d3d-4c1f-91d3-13729e0d6f24",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        1
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentDebugAddDevice",
+                    "help": "GoogleMobileAds_ConsentDebugAddDevice(id)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentDebugAddDevice",
+                    "returnType": 2
+                },
+                {
+                    "id": "485dded4-4daf-489f-8843-53b0fa82b502",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        2
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentDebugSetDeviceInEEA",
+                    "help": "GoogleMobileAds_ConsentDebugSetDeviceInEEA(isInEEA)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentDebugSetDeviceInEEA",
+                    "returnType": 2
+                },
+                {
+                    "id": "8c2b2cb8-44c0-43af-837d-97e075564649",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentGetAllowPersonalizedAds",
+                    "help": "GoogleMobileAds_ConsentGetAllowPersonalizedAds()",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentGetAllowPersonalizedAds",
+                    "returnType": 2
+                },
+                {
+                    "id": "3b7cd241-cbae-4adb-b4dc-77c967991653",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        2
+                    ],
+                    "externalName": "GoogleMobileAds_ConsentSetAllowPersonalizedAds",
+                    "help": "GoogleMobileAds_ConsentSetAllowPersonalizedAds(allowPersonalized)",
+                    "hidden": false,
+                    "kind": 11,
+                    "name": "GoogleMobileAds_ConsentSetAllowPersonalizedAds",
+                    "returnType": 2
                 }
             ],
             "init": "",
             "kind": 4,
             "order": [
-                "5323a377-9398-4483-beba-51337ce4114f",
-                "aefbe8eb-f60a-4c0e-8462-88f6db68fd9e",
-                "fd1c9aea-89f0-4585-96b0-a7dd1a40a5d6",
-                "4747f72e-9485-4823-bdd4-160c8b5cf194",
-                "b279d4e2-32db-4f0b-b157-97747fbfe59a",
-                "d5abdc9b-7cf9-4a8d-b587-3ae2cf67477b",
-                "5e7181c9-7f44-4bce-8d0c-7a1cc12cf300",
-                "2171a08e-9f81-4510-ae2d-6a1ecab2cdea",
-                "3555a064-7850-4259-8f8e-45c546622c02",
-                "f2329317-7ae9-4a03-8645-081bc5968a26",
-                "0d96f922-4fbc-470d-b2ca-4e4208963bd6",
-                "560ccc1b-2f60-4952-8628-63005bc5d712",
-                "432ba434-04a3-43ec-9b58-eefb687e7d7e",
-                "d11c9fba-7164-4b92-94fa-85aad8efa73f",
-                "031670e2-d847-4263-8a65-5c6e460b1aae",
-                "22d10034-41f2-44f1-b7b0-b3bb943e57d8"
+                "ac6ae7dc-ac39-4713-9865-680f78c0cd4e",
+                "61fd3a41-824d-43ad-8a96-51169ad03892",
+                "1141aeda-afba-4874-81b1-3423dec1ca56",
+                "209c5db8-3917-49c1-a584-5a0c38af0f93",
+                "3e0805a3-8212-4606-95d8-dc5ae743226d",
+                "3464b313-a6e8-4fcb-b107-6c1f8046e01b",
+                "ad590ce2-e6ec-46b6-a4b9-9d776f0d9047",
+                "e563b9e3-031d-4526-af68-8ff11154579b",
+                "fd7693bd-7087-4cf6-a2c6-a9c4b1f5ac3a",
+                "bd375b87-441f-411f-b7c3-9da06624f228",
+                "c3a27242-07e9-4280-b94c-57a8c89faa5b",
+                "82a01a33-31cd-4876-a558-8975256e4962",
+                "5f86dc50-0061-46fd-a471-a33fa592f86a",
+                "790b7b7f-1045-4c8b-892d-730d95b75583",
+                "2f4f7119-654b-4cb5-a3d2-d60b714056ed",
+                "d4afac93-4ae7-445e-8b22-ca60f3c5cab0",
+                "91b4daf8-81f5-4c1f-9e63-3bd1b6159655",
+                "4f86cd94-9c61-4275-a906-77509db7a262",
+                "8db98f25-d605-4cd8-aa9d-09f0005311f9",
+                "f27d6994-fe10-4484-a927-17a46dc75134",
+                "a72ae30c-6105-426a-8e1a-3d77c0e10951",
+                "7a1fd359-7d3d-4c1f-91d3-13729e0d6f24",
+                "485dded4-4daf-489f-8843-53b0fa82b502",
+                "8c2b2cb8-44c0-43af-837d-97e075564649",
+                "3b7cd241-cbae-4adb-b4dc-77c967991653"
             ],
             "origname": "extensions\\admob.ext",
             "uncompress": false
         },
         {
-            "id": "875a057a-a60e-4753-8f0a-142eac6f8497",
+            "id": "03bfd53b-7bf4-4a7f-b3ae-138d86056527",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
             "ProxyFiles": [
@@ -372,7 +522,7 @@
             ],
             "constants": [
                 {
-                    "id": "6cdac1ba-4b08-4c61-bb89-10ad234d152e",
+                    "id": "5cd41d94-b22a-4024-82d4-4d31906d686f",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SUCCESS",
@@ -380,7 +530,7 @@
                     "value": "0"
                 },
                 {
-                    "id": "a02dcdc2-57af-4436-b8a2-a7a30f055497",
+                    "id": "2e08de7e-cdfe-4a29-8f7b-9ec1ac448772",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SERVICE_MISSING",
@@ -388,7 +538,7 @@
                     "value": "1"
                 },
                 {
-                    "id": "ecfdca6b-2a8f-46a8-b024-ebb7db6742e9",
+                    "id": "0efb15aa-9494-407e-bc45-d138353566f8",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SERVICE_UPDATING",
@@ -396,7 +546,7 @@
                     "value": "18"
                 },
                 {
-                    "id": "9ae324b2-7088-40ba-9d46-87dd473529bf",
+                    "id": "1a3262de-294f-4a43-8149-957579b8562f",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SERVICE_VERSION_UPDATE_REQUIRED",
@@ -404,7 +554,7 @@
                     "value": "2"
                 },
                 {
-                    "id": "bdb99cfc-938f-42b8-94a7-c5d80e613e3c",
+                    "id": "df9f91d6-0a2f-4881-b347-dc8ed8e7f1dd",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SERVICE_DISABLED",
@@ -412,7 +562,7 @@
                     "value": "3"
                 },
                 {
-                    "id": "5db02955-e2ae-47d9-8cea-86755e99ce8b",
+                    "id": "76ffcacc-fb98-4ca4-a605-5f1dd263a245",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_SERVICE_INVALID",
@@ -420,7 +570,7 @@
                     "value": "9"
                 },
                 {
-                    "id": "3f4201b8-1150-4b58-9ec2-739ac5ffea50",
+                    "id": "d181ec7c-3349-4003-83d9-412b6be70c6e",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_EVENT_ID_POST_SCORE",
@@ -428,7 +578,7 @@
                     "value": "9818"
                 },
                 {
-                    "id": "2dc5848c-d68c-4f3e-a80f-d2c05c24a7f1",
+                    "id": "b047596d-1be1-485c-a8ce-da8f17f53f29",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_EVENT_ID_POST_ACHIEVEMENT",
@@ -436,7 +586,7 @@
                     "value": "9819"
                 },
                 {
-                    "id": "045bb0e7-f2bc-4cc7-b71b-4cf51f2eff3d",
+                    "id": "935475f8-5585-43d5-b460-7d4d0436a772",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_EVENT_ID_REVEAL_ACHIEVEMENT",
@@ -444,7 +594,7 @@
                     "value": "9821"
                 },
                 {
-                    "id": "581cee1b-d88b-4651-a402-e099b9079777",
+                    "id": "2a46f897-5b52-42ff-b25c-9600df719e42",
                     "modelName": "GMExtensionConstant",
                     "mvc": "1.0",
                     "constantName": "GooglePlayServices_EVENT_ID_INCREMENT_ACHIEVEMENT",
@@ -457,7 +607,7 @@
             "final": "",
             "functions": [
                 {
-                    "id": "378443a5-fc19-470d-b36e-dab552b4624a",
+                    "id": "7bab8dfd-3773-42f4-a7f1-bdaa4e781d85",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -472,7 +622,7 @@
                     "returnType": 2
                 },
                 {
-                    "id": "ea574924-f2b4-4892-bc01-8f32a6d6945e",
+                    "id": "2fc08600-6326-4066-ba5c-9157cceb4dba",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 0,
@@ -490,62 +640,62 @@
             "init": "",
             "kind": 4,
             "order": [
-                "378443a5-fc19-470d-b36e-dab552b4624a",
-                "ea574924-f2b4-4892-bc01-8f32a6d6945e"
+                "7bab8dfd-3773-42f4-a7f1-bdaa4e781d85",
+                "2fc08600-6326-4066-ba5c-9157cceb4dba"
             ],
             "origname": "extensions\\GooglePlayServicesExtension.ext",
             "uncompress": false
         }
     ],
-    "gradleinject": "\\u0009\\u0009 compile 'com.google.android.gms:play-services-games:11.8.0'\\u000d\\u000a   compile 'com.google.android.gms:play-services-ads:11.8.0'\\u000d\\u000a   compile 'com.google.android.gms:play-services-plus:11.8.0'\\u000d\\u000a   compile 'com.google.android.gms:play-services-gcm:11.8.0'\\u000d\\u000a   compile 'com.google.android.gms:play-services-auth:11.8.0'\\u000d\\u000a\\u000d\\u000a\\u0009\\u000d\\u000a}\\u000d\\u000arepositories {   \\u000d\\u000a        maven { url \"https:\/\/maven.google.com\" }\\u000d\\u000a}\\u000d\\u000adependencies {\\u000d\\u000a",
+    "gradleinject": "   compile 'com.google.android.gms:play-services-games:11.8.0'\\u000a\\u000d   compile 'com.google.android.gms:play-services-ads:11.8.0'\\u000a\\u000d   compile 'com.google.android.gms:play-services-plus:11.8.0'\\u000a\\u000d   compile 'com.google.android.gms:play-services-gcm:11.8.0'\\u000a\\u000d   compile 'com.google.android.gms:play-services-auth:11.8.0'\\u000a\\u000d   compile 'com.google.android.ads.consent:consent-library:1.0.3'\\u000a\\u000d   compile fileTree(dir: 'libs', include: ['*.jar'])\\u000a\\u000d}\\u000a\\u000drepositories\\u000a\\u000d{\\u000a\\u000d  maven\\u000a\\u000d  {\\u000a\\u000d    url \"https:\/\/maven.google.com\"\\u000a\\u000d  }\\u000a\\u000d}\\u000a\\u000ddependencies\\u000a\\u000d{\\u000a\\u000d\\u000a\\u000d",
     "helpfile": "",
     "installdir": "",
-    "iosProps": false,
+    "iosProps": true,
     "iosSystemFrameworkEntries": [
         {
-            "id": "ca05f68b-84d7-4ea1-97d2-6f5cf3c54b30",
+            "id": "cc0939e4-d3b2-46e1-8362-cc83e4024883",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "AdSupport.framework",
             "weakReference": false
         },
         {
-            "id": "cc074422-187e-4128-a685-487da1b2ec5c",
+            "id": "6579cba7-a940-4743-8a11-a2124a649b37",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "CoreBluetooth.framework",
             "weakReference": false
         },
         {
-            "id": "898ddb48-98db-432a-8833-e8864e42fae7",
+            "id": "91bdcfa5-f670-45cf-afc9-3f39e283aa36",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "CoreMotion.framework",
             "weakReference": false
         },
         {
-            "id": "7a06a049-a7a7-4f51-96dc-357985dd9419",
+            "id": "a8dd458b-0fc7-49ff-973b-c37cf4a180eb",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "CoreMedia.framework",
             "weakReference": false
         },
         {
-            "id": "0998a404-91ae-4e78-9d35-33e9f62774cf",
+            "id": "70d6d31b-95f0-4ca4-bd27-35dacc4366d8",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "CoreVideo.framework",
             "weakReference": false
         },
         {
-            "id": "fd6fdb40-8fff-4857-9a3a-6d51bd1f8bf7",
+            "id": "1d9e5e52-abba-42f9-95ae-731718e1d64a",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "GLKit.framework",
             "weakReference": false
         },
         {
-            "id": "7f6e00cd-929f-4d8c-b49d-cbbcdab09878",
+            "id": "8e120940-8828-4c27-9116-d0e4455f4f11",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "SafariServices.framework",
@@ -554,10 +704,17 @@
     ],
     "iosThirdPartyFrameworkEntries": [
         {
-            "id": "e0f42d02-143c-4741-8600-1fa326a582b9",
+            "id": "daa92131-25b5-4ab5-834f-9fea6ece6579",
             "modelName": "GMExtensionFrameworkEntry",
             "mvc": "1.0",
             "frameworkName": "GoogleMobileAds.framework",
+            "weakReference": false
+        },
+        {
+            "id": "b3f68734-d973-42f3-8954-a5a57059436a",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": "PersonalizedAdConsent.embeddedframework",
             "weakReference": false
         }
     ],
@@ -576,9 +733,9 @@
     "tvosThirdPartyFrameworkEntries": [
         
     ],
-    "tvosclassname": null,
-    "tvosmaccompilerflags": null,
-    "tvosmaclinkerflags": null,
-    "tvosplistinject": null,
-    "version": "3.0.1"
+    "tvosclassname": "",
+    "tvosmaccompilerflags": "",
+    "tvosmaclinkerflags": "",
+    "tvosplistinject": "",
+    "version": "3.0.5"
 }
